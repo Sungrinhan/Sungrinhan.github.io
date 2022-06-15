@@ -200,3 +200,9 @@ export class Post {
 ```
 
 - `post.tags` 배열을 각각 검증할 것임!
+
+---
+
+참조
+
+- [github 공식문서](https://github.com/typestack/class-validator#validating-arrays)
