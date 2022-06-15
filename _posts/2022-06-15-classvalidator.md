@@ -1,5 +1,5 @@
 ---
-title: 'TS' class-validator의 활용과 검증옵션
+title: 'TS'class-validator의 활용과 검증옵션
 date: 2022-06-15 09:25:SS +/- TTTT
 categories: [TypeScript, Library]
 tags: [validator, typescript] # TAG는 반드시 소문자로 이루어져야함!
