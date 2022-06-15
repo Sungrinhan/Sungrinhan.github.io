@@ -64,26 +64,29 @@ post.site = "googlecom"; // should not pass
 # 에러 검증하기
 
 ```js
-import {validate, validateOrReject} from 'class-validator'
+import { validate, validateOrReject } from "class-validator";
 
-validate(post).then(errors => {
-	// errors 는 validation errors 의 '배열'로 나타남
-	if(errors.length > 0 ) {
-		console.log('validation failed.errors:', errors)}
-})
+validate(post).then((errors) => {
+  // errors 는 validation errors 의 '배열'로 나타남
+  if (errors.length > 0) {
+    console.log("validation failed.errors:", errors);
+  }
+});
 
-validateOrReject(post).catch(errors => {
-	console.log('Promise rejected (validation failed). Errors:', errors);
-})
+validateOrReject(post).catch((errors) => {
+  console.log("Promise rejected (validation failed). Errors:", errors);
+});
 // or
 async function validateOrRejectExample(input) {
-	try {
-		await validateOrReject(input);
-	} catch (errors) {
-		console.log('Caught promise rejection (validation failed).Errors: ', errors);
-	}
+  try {
+    await validateOrReject(input);
+  } catch (errors) {
+    console.log(
+      "Caught promise rejection (validation failed).Errors: ",
+      errors
+    );
+  }
 }
-
 ```
 
 - `validate().` 는 에러를 뱉을 때 `errors` 배열을 뱉는다.
