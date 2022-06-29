@@ -17,5 +17,5 @@ tags: # TAG는 반드시 소문자로 이루어져야함!
 title: 블로그 포스트 작성하는 방법.
 date: 2022-06-13 14:48:SS +/- TTTT
 categories: [Jekyll, chirpy]
-tags: [TAG] # TAG는 반드시 소문자로 이루어져야함!
+tags: [tag] # tag는 반드시 소문자로 이루어져야함!
 ```
