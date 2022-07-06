@@ -128,7 +128,7 @@ formData.getAll("item"); // ['test2']
 **formData.set(name, value)**
 
 - set 함수는 append 함수처럼 필드를 추가시켜줌
-- append와 비슷한 set메소드는 필드를 추가해주기도 하지만, <span style="color: red"><u>기존 key가 있으면 그 key 값을 모두 덮어씌워버림!!</u></span>
+- append와 비슷한 set메소드는 필드를 추가해주기도 하지만, <u>기존 key가 있으면 그 key 값을 모두 덮어씌워버림!!</u>
 
 ## formData 서버 전송
 
