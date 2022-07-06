@@ -116,7 +116,7 @@ formData.getAll("item"); // ['test2']
 
 - 주어진 name의 해당하는 필드 value 를 반환.
 
-  **formData.getAll(name)**
+  **formData.getAll(name)**
 
 - append 함수로 추가시 name이 중복 가능함.
 - 따라서 주어진 name 의 해당 하는 필드의 모든 value 를 반환
