@@ -1,7 +1,7 @@
 ---
 title: "[JS] FormData 정리"
 date: 2022-07-06 00:09:SS +/- TTTT
-categories: [JavaScript, Errors]
+categories: [JavaScript, Form]
 tags: [javascript, formdata] # TAG는 반드시 소문자로 이루어져야함!
 ---
 
