@@ -90,6 +90,15 @@ export class User {
 }
 ```
 
+> 위와 같이 작성된 코드에서는 아래와 같이 **User 클래스에 모든 책임을 위임**할 수 있다.
+>
+> ```ts
+> const users: User[] = api.getUsers();
+> return users.map((u) => u.getFullName());
+> ```
+>
+> 흔히 말하는 OOP, 도메인 기반의 Entity 설계등을 고려했을때 **어떤 객체에 어떤 책임을 줄 것인가**는 대단히 중요하다.
+
 `user.json` 파일에서 `User` 타입의 유저들을 다운로드 받는다고 가정하고, 다음과 같은 코드를 작성하길 원한다.
 
 ```ts
