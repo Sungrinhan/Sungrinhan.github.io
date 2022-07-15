@@ -323,6 +323,8 @@ body,
 
 - 실제 body 에 담기는 payload 의 모든값이 JSON 화 되어, number로 보내져야 하는 타입에도 "" 따옴표가 생겨서 서버에서 읽지 못하는 상태가 발생했다.
 
+--> 이것은 내가실수했다. allocate 즉 새로운 객체를 new 함수로 생성해서 진행해야 되는 것이다. class 형을 너무 안쓰다보니 어떻게 사용하는지를 까먹었다. 다음부터는 잘 사용해보자. new 객체로 생성하고, undefined 나 null 을 제외하니 잘되었다.
+
 ## 참조
 
 [깃헙 typestack class-transformer](https://github.com/typestack/class-transformer#what-is-class-transformer)

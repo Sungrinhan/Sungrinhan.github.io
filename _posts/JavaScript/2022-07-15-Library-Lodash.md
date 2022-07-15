@@ -1,0 +1,211 @@
+---
+title: "[JS][Library] Lodash"
+date: 2022-07-15 08:44:SS +/- TTTT
+categories: [JavaScript, Library]
+tags: [javascript, library, lodash] # TAG는 반드시 소문자로 이루어져야함!
+---
+
+# Lodash
+
+[JavaScript, Library]
+강력한 자바스크립트 유틸리티 라이브러리이다.
+
+보통 array, collection, date 등 **데이터의 필수적인 구조를 쉽게 다룰 수 있게**끔 해준다.
+
+배열, 숫자, 객체, 문자열 등으로 작업하는 번거로움을 없애서 JavaScript를 더 쉽게 만든다.
+
+- 배열, 객체 & 문자열을 iterating 할 때
+- 값을 조종하거나 테스트 할 때
+- 복합 함수 만들 때
+
+Lodash 는 코드를 줄여주고, 복잡성을 낮춘다. 특히 프론트 엔드에서 사용함.
+
+# Documentation
+
+## 배열 method
+
+### `_.chunk(array, [size=1])`
+
+Creates an array of elements split into groups the length of _size_. If _array_ can't be split evenly, the final chunk will be the remaining elements.
+
+**Arguments**
+
+- array (Array) : The array to process.
+- [size=1] (number): The length of each chunk
+
+**Returns**
+
+- (array) : Returns the new array of chunks.
+
+**Example**
+
+```ts
+_.chunk(["a", "b", "c", "d"], 2);
+// => [['a', 'b'], ['c', 'd']]
+_.chunk(["a", "b", "c", "d"], 3);
+// => [['a', 'b', 'c'], ['d']]
+```
+
+### `_.compact(array)`
+
+Creates an array with all falsey values removed. The values 'false, null, 0, "", undefined, NaN' are falsy.
+
+**Arguments**
+
+- array (Array) : The array to compact.
+
+**Returns**
+
+- (Array) : Returns the new array of filtered values.
+
+**Example**
+
+```ts
+_.compact([0, 1, false, 2, "", 3]);
+// => [1, 2, 3]
+```
+
+### `_.concat(array, [values])`
+
+Creates a new array concatenating array with any additional arrays and/or values.
+
+**Arguments**
+
+- array (Array): The array to concatenate.
+- [values] (...\*) : The values to concatenate.
+
+**Returns**
+
+- (Arrray): Returns the new concatenated array.
+
+**Example**
+
+```ts
+var array = [1];
+var other = _.concat(array, 2, [3], [[4]]);
+
+console.log(other);
+// => [1, 2, 3, [4]]
+
+console.log(array);
+// => [1]
+```
+
+### `_.fill(array, value, [start=0], [end=array.length])`
+
+Fills elements of array with value from start up to , but not including, end.
+This method mutates array.
+
+**Arguments**
+
+- array (Array): The array to fill.
+- value (\*) : The value to fill array with.
+- [start=0] (number) : The start position.
+- [end=array.length] (number) : The end position.
+
+**Returns**
+
+- (Array) : Returns array.
+
+**Example**
+
+```ts
+var array = [1, 2, 3];
+
+_.fill(array, "a");
+console.log(array);
+// => ['a', 'a', 'a']
+
+_.fill(Array(3), 2);
+// => [2, 2, 2]
+
+_.fill([4, 6, 8, 10], "*", 1, 3);
+// => [4, '*', '*', 10]
+```
+
+### `_.findIndex(array, [predicate=_.identity], [fromIndex=0])`
+
+This method is like `_.find `except that it returns the index of the first element predicate returns truthy for instead of the element itself.
+
+**Arguments**
+
+- array (Array) : The array to inspect
+- [predicate=_.identity] (Function) : The function invoked per iteration.(반복당 호출되는 함수)
+- [fromIndex=0] (number) : The index to search from.
+
+**Returns**
+
+- (number) : Returns the index of the found element, else -1.
+
+**Example**
+
+```ts
+var users = [
+  { user: "barney", active: false },
+  { user: "fred", active: false },
+  { user: "pebbles", active: true },
+];
+
+_.findIndex(users, function (o) {
+  return o.user == "barney";
+});
+// => 0
+
+// The `_.matches` iteratee shorthand.
+_.findIndex(users, { user: "fred", active: false });
+// => 1
+
+// The `_.matchesProperty` iteratee shorthand.
+_.findIndex(users, ["active", false]);
+// => 0
+
+// The `_.property` iteratee shorthand.
+_.findIndex(users, "active");
+// => 2
+```
+
+### `_.flatten(array)`
+
+Flattens array a single level deep.
+
+**Arguments**
+
+- array (Array): The array yo flatten.
+
+**Returns**
+
+- (Array): Returns the new flattened array.
+
+**Example**
+
+```ts
+_.flatten([1, [2, [3, [4]], 5]]);
+// => [1, 2, [3, [4]], 5]
+```
+
+### `_.flattenDeep(array)`
+
+Recursively flattens array. 재귀적으로 배열을 평탄화? 한다. 새로운 배열을 생성한다. 기본적으로 자바스크립트에도 Array.prototype.flat() 메소드가 있다.
+
+Arguments
+
+- array (Array): The array to flatten.
+
+Returns
+
+- (Array): Returns the new flattened array.
+
+Example
+
+```ts
+_.flattenDeep([1, [2, [3, [4]], 5]]);
+// => [1, 2, 3, 4, 5]
+```
+
+## 느낀점
+
+적고 나니까 flat 함수가 있는데 lodash 에서는 왜 따로 만들었는지 모르겠다. 심지어 flat(). 메소드는 argument 로 depth 숫자도 설정할 수 있는데 말이다. 혹시라도 데이터 자료를 다루는데 어려움이 있다면 lodash 에서 한번 검색해보자.
+
+## 참조
+
+더 많은 method 는 [Lodash 공식홈페이지](https://lodash.com/) 를 참고하자.
