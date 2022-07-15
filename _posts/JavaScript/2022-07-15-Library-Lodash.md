@@ -1,7 +1,7 @@
 ---
 title: "[JS][Library] Lodash"
 date: 2022-07-15 08:44:SS +/- TTTT
-categories: [JavaScript, Library]
+categories: [JavaScript, JSLibrary]
 tags: [javascript, library, lodash] # TAG는 반드시 소문자로 이루어져야함!
 ---
 
