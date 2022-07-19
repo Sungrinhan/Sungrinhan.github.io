@@ -76,7 +76,7 @@ domains: [
 > - **초기 로딩 시간 단축** - 웹 페이지를 지연로드하면 한번에 로드해야 하는 페이지 무게가 줄어들어 초기 속도가 빨라진다.
 > - **대역폭 보존** - 지연로딩은 요청된 경우에만 사용자에게 컨텐츠를 제공하여 대역폭을 절약한다.
 >   **시스템 리소스 보존** - 지연 로딩은 이미지, JavaScript 및 기타 코드 중 일부만 실제로 렌더링 하거나 실행하기 때문에 서버와 클라 리소스를 모두 절약한다.
->   ![처음 로드될 때와 전체 페이지가 로드된 후 지연 로드](https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/Lazy-Loading-2.jpg.webp)
+>   [처음 로드될 때와 전체 페이지가 로드된 후 지연 로드](https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/Lazy-Loading-2.jpg.webp)
 
 > Largest Contentful Paint 는 무엇인가?
 > LCP 는 페이지에서 가장 큰 콘텐츠 요소가 방문자의 뷰포트에 표시되는데 걸리는 시간을 측정한다.
