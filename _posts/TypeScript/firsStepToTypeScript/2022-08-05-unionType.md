@@ -61,3 +61,22 @@ function askSomeone(someone: Developer | Person) {
   someone.age;
 }
 ```
+
+### && 연산자(intersection)
+
+```ts
+var bowman: string & number & boolean; // bowman: never 라고 나온다.
+
+function askSomeone(someone: Developer & Person) {
+  // && 연산자를 사용하면 , developer 와 person 객체에서 모든부분이다. 모든 속성을 합친 타입이다.
+  console.log(someone);
+  someone.name;
+  someone.skill;
+  someone.age;
+}
+
+askSomeone({ name: "디벨로퍼", skill: "웹 개발" }); // age 도 필요하다.
+askSomeone({ name: "캡틴", age: 100 }); // skill 도 필요하다.
+```
+
+- & 연산자를 쓰면 , 두 객체를 포함한 모든 정보를 담는다.
