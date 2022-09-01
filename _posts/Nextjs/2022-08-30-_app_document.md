@@ -146,10 +146,10 @@ export default function Document() {
 
 ### Conclusion
 
-모든 페이지는 \_app 과 \_document 를 거쳐간다.
-\_app 이후에 \_document 가 실행.
-\_app 은 어플리케이션 로직, 글로벌 스타일 등을 다룬다.
-\_document 는 HTML 마크업 자체에 집중.
+- 모든 페이지는 \_app 과 \_document 를 거쳐간다.
+- \_app 이후에 \_document 가 실행.
+- \_app 은 어플리케이션 로직, 글로벌 스타일 등을 다룬다.
+- \_document 는 HTML 마크업 자체에 집중.
 
 참고
 
