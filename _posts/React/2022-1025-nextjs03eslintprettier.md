@@ -1,6 +1,6 @@
 ---
 title: "[React][Next.js] Next.js 시작하기 eslint, prettier(03)"
-date: 2022-10-25 19:30:SS +/- TTTT
+date: 2022-10-26 19:30:SS +/- TTTT
 categories: [React, NextJs]
 tags: [react, nextjs, eslint, prettier] # TAG는 반드시 소문자로 이루어져야함!
 ---
@@ -154,7 +154,7 @@ ESLint Config 의 경우 다음 [공식문서](https://eslint.org/docs/latest/us
 }
 ```
 
-`package.json` 이 너무 복잡해지는 것을 원치 않는다면 파일을 분리시켜라.
+`package.json` 이 너무 복잡해지는 것을 원치 않는다면 파일을 분리하자.
 
 ## 참고
 
