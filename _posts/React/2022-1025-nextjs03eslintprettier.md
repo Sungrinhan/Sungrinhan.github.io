@@ -1,5 +1,5 @@
 ---
-title: "[React][Next.js] Next.js 시작하기 eslint, prettier(03)"
+title: "[React][Next.js] Next js 시작하기 eslint, prettier(03)"
 date: 2022-10-26 19:30:SS +/- TTTT
 categories: [React, NextJs]
 tags: [react, nextjs, eslint, prettier] # TAG는 반드시 소문자로 이루어져야함!
