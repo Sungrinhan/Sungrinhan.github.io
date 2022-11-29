@@ -92,7 +92,8 @@ npm i jspdf --save
 
 더 많은 정보는 공식 홈페이지에서 확인이 가능하다.
 
-> [html2canvas 공식 홈페이지 ](https://html2canvas.hertzen.com/) > [jsPDF 홈페이지](https://raw.githack.com/MrRio/jsPDF/master/docs/jsPDF.html)
+> [html2canvas 공식 홈페이지 ](https://html2canvas.hertzen.com/)
+> [jsPDF 홈페이지](https://raw.githack.com/MrRio/jsPDF/master/docs/jsPDF.html)
 
 pdf로 만들어 주는 ts 파일을 생성했다.
 
