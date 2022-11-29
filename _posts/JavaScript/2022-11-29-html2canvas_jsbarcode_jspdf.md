@@ -260,3 +260,7 @@ export  default PdfLabel;
 - 해당 모달이 렌더링 될 때, useEffect 를 사용해서 barcode 를 만들어 준다.
 - 바코드생성이 완료되면(isBarcodeDone 으로 컨트롤) 다음 useEffect 가 실행되고, pdf 다운로드가 진행된다.
 - 렌더링과 사이드이펙트가 모두 실행되고 나면, 모달창을 닫는다. 이는 위에 `table: render()` 함수에서 작성해 놓았다.
+
+## 출처
+
+본인
