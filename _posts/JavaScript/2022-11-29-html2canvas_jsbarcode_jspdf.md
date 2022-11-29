@@ -74,10 +74,10 @@ const BarcodeItemScreen = () => {
 };
 ```
 
--     canvas 를 사용하기 위해 <canvas> 엘리먼트를 만들어 준다.
+- canvas 를 사용하기 위해 `<canvas>` 엘리먼트를 만들어 준다.
 - jsBarcode()함수를 통해 바코드를 만든다.
-  -      `canvas`: 위에서 정의한 <canvas> 엘리먼트
-  -      `barcodeNumber`: 바코드로 변경할 문자
+  - `canvas`: 위에서 정의한 `<canvas>` 엘리먼트
+  - `barcodeNumber`: 바코드로 변경할 문자
   - `{height, width, displayValue, format:'CODE128', fontSize}` : 만드는 바코드의 option 을 설정할 수 있음!
     > - 더 많은 옵션은 깃헙에서 확인 가능 [jsBarcode github](https://github.com/lindell/JsBarcode/wiki/Options)
 - image/png 파일 형식으로 dataurl 을 imageUrl 에 저장한다.
