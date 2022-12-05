@@ -181,5 +181,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
 ## 참조
 
-[테크카카오 블로그\_Mocking으로 생산성까지 챙기는 FE 개발](https://tech.kakao.com/2021/09/29/mocking-fe/)
+[테크카카오 블로그\_Mocking으로 생산성까지 챙기는 FE 개발](https://tech.kakao.com/2021/09/29/mocking-fe/),
+
 [next 에서 msw사용하기 공식 깃헙](https://github.com/vercel/next.js/tree/canary/examples/with-msw)
