@@ -1,10 +1,3 @@
----
-title: "[Nextjs, Mocking] 프엔개발 빠르게하기 (MSW Next 에서 사용하기)"
-date: 2022-12-05 15:08:SS +/- TTTT
-categories: [Nextjs]
-tags: [nextjs, mockingjs] # TAG는 반드시 소문자로 이루어져야함!
----
-
 # Mocking 으로 FE 개발을 빠르게 시작해보자.
 
 # 작업계기
@@ -179,8 +172,82 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 ```
 
+## 필요 파일들 (mocks)
+
+root 위치에 mocks 라는 폴더를 만들고 , 안에 4개의 폴더를 만든다.
+
+- `handlers.ts ` : fetch 할 url, req, res 를 여기서 만든다.
+- `browser.ts` : browser 에서 컨트롤
+- `server.ts` : server 에서 컨트롤
+- `index.ts` : \_app.tsx 에서 import 해서 쓸것
+
+handler.ts , browser.ts 는 위에서 작성하였으니 나머지만 보자.
+
+### server.ts
+
+```ts
+// server.ts
+
+import { setupServer } from "msw/node";
+import { handlers } from "./handlers";
+
+export const server = setupServer(...handlers);
+```
+
+구조는 브라우저와 같다. 다만 Serverside 로 구현할 때 필요한것(next 특징)
+
+### index.ts
+
+```ts
+// index.ts
+
+async function initMocks() {
+  if (typeof window === "undefined") {
+    const { server } = await import("./server");
+    server.listen();
+  } else {
+    const { worker } = await import("./browser");
+    worker.start();
+  }
+}
+
+export default initMocks;
+```
+
+window 가 켜지지 않았을 때 , 즉 첫 렌더링 전이기 때문에 server 로 보낸다.
+window 가 켜지면(렌더링 이후 브라우저쪽에서 컨트롤) browser 로 보낸다.
+
+# 문제, 에러 발생
+
+## FetchError: request to [https://my.backend/book](https://my.backend/book) failed, reason: getaddrinfo ENOTFOUND my.backend
+
+- getaddrinfo ENOTFOUND : 인식할 수 없는 host 가 설정되었을 때 발생한다.
+- host 주소로 설정한 address 의 prefix (http, https) 등을 확인 후 다시 시도하면 해결 가능.
+
+하지만 나같은 경우는 제대로 설정이 되어있었음 => 최상단 페이지 \_app.tsx 에서 노드문법인 require 을 쓴게 생각나서 해당부분을 수정하였더니 해결됨!
+
+```ts
+import initMocks from mocks
+
+if (process.env.NEXT_PUBLIC_API_MOCKING  ===  'enabled') {
+
+import('../mocks'); 혹은 require('../mocks')  -> initMocks() ;  // mocks/index.ts 를 단순히 불러오는게 아니고 , 해당함수를 실행하게끔 코드를 수정했더니 해결되었다.
+
+}
+```
+
+## net::ERR_NAME_NOT_RESOLVED
+
+원인
+
+- 해당 호스트 이름과 일치하는 IP 주소를 확인할 수 없음을 의미한다.
+- 잘못된 DNS 캐시도 에러를 발생시킨다
+- 메모리나 통신문제로 사이트를 로드할 수 없을 때도 에러를 발생시킨다
+- 크롬 브라우저 ,구글OS의 특성으로 해당 환경에서 더 자주 접할 수 있다
+
+해결방법 : 브라우저를 종료하고 새로열었더니 해결됨!
+
 ## 참조
 
-[테크카카오 블로그\_Mocking으로 생산성까지 챙기는 FE 개발](https://tech.kakao.com/2021/09/29/mocking-fe/),
-
+[테크카카오 블로그\_Mocking으로 생산성까지 챙기는 FE 개발](https://tech.kakao.com/2021/09/29/mocking-fe/)
 [next 에서 msw사용하기 공식 깃헙](https://github.com/vercel/next.js/tree/canary/examples/with-msw)
