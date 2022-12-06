@@ -1,5 +1,5 @@
 ---
-title: "[Nextjs, Mocking] 프엔개발 빠르게하기 (Mocking.js Next 에서 사용하기)"
+title: "[Nextjs, Mocking] 프엔개발 빠르게하기 (MSW Next 에서 사용하기)"
 date: 2022-12-05 15:08:SS +/- TTTT
 categories: [Nextjs]
 tags: [nextjs, mockingjs] # TAG는 반드시 소문자로 이루어져야함!
