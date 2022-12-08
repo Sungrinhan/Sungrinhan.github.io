@@ -1,3 +1,10 @@
+---
+title: "[Next][Mocking] MSW, Next에서 사용해보자"
+date: 2022-12-05 14:59:SS +/- TTTT
+categories: [Nextjs]
+tags: [nextjs, msw] # TAG는 반드시 소문자로 이루어져야함!
+---
+
 # Mocking 으로 FE 개발을 빠르게 시작해보자.
 
 # 작업계기
