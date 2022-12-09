@@ -31,7 +31,7 @@ tags: [algorithm, hash] # TAG는 반드시 소문자로 이루어져야함!
 
 ### 3.1. hash table 만들기
 
-- 참고 : 파이썬 list comprehension - https://www.fun-coding.org/PL&OOP5-2.html
+- 참고 : 파이썬 list comprehension - [https://www.fun-coding.org/PL&OOP5-2.html](https://www.fun-coding.org/PL&OOP5-2.html)
 
 ```python
 [출력표현식 for 요소 in 입력Sequence [if 조건식]]
