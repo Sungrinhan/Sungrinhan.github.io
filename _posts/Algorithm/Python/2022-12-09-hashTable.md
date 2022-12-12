@@ -31,7 +31,7 @@ tags: [algorithm, hash] # TAG는 반드시 소문자로 이루어져야함!
 
 ### 3.1. hash table 만들기
 
-- 참고 : 파이썬 list comprehension - [https://www.fun-coding.org/PL&OOP5-2.html](https://www.fun-coding.org/PL&OOP5-2.html)
+- 참고 : 파이썬 list comprehension - https://www.fun-coding.org/PL&OOP5-2.html
 
 ```python
 [출력표현식 for 요소 in 입력Sequence [if 조건식]]
@@ -146,6 +146,8 @@ get_data('Andy')
 2. 해쉬 키 생성: hash(data)  = (파이썬 내장 메소드) 애초에 파이썬은 해시함수를 제공함
 </div>
 
+> hash() 함수는 파이썬 내장함수다. 요즘에는 잘 안쓰는데, 그 이유가 **해시값이 매번 바뀌기 때문**이다.
+
 ```python
 hash_table = list([0 for i in range(8)])
 
@@ -175,4 +177,143 @@ read_data('Dave')
 ```python
 hash_table
 # [ '0102030200', 0, 0, 0, 0, 0, 0, '01033232200' ]
+```
+
+## 6. 충돌( Collision ) 해결 알고리즘 (좋은 해쉬 함수 사용하기)
+
+> 해쉬 테이블의 가장 큰 문제는 충돌(Collision)의 경우다. 이 문제를 **충돌** 또는 **해쉬 충돌** 이라고 부른다.
+
+### 6.1. Chaining 기법
+
+- 개방 해슁 또는 Open Hashing 기법 중 하나: **해쉬 테이블 저장공간 외의 공간**을 활용하는 기법
+- 충돌이 일어나면, 링크드 리스트라는 자료 구조를 사용해서, 링크드 리스트로 데이터를 추가로 뒤에 연결시켜서 저장하는 기법
+
+<div class="alert alert-block alert-warning">
+<strong><font color="blue" size="3em">연습2: 연습1의 해쉬 테이블 코드에 Chaining 기법으로 충돌해결 코드를 추가해보기</font></strong><br>
+1. 해쉬 함수: key % 8<br>
+2. 해쉬 키 생성: hash(data)
+</div>
+
+```python
+hash_table = list([0 for i in range(8)])
+# [0, 0, 0, 0, 0, 0, 0, 0]
+
+def get_key(data):
+	return hash(data)
+
+def hash_function(key):
+	return key % 8
+
+def save_data(data, value):
+	index_key = get_key(data)
+	hash_address = hash_function(index_key)
+	if hash_table[hash_address] !== 0: # 해시테이블에서 해당 address의 값이 0 이 아닌경우, 즉 이미 값이 존재하는 경우
+		for index in range(len(hash_table[hash_address])): # 해당 address 에 해당하는 배열을 순회한다.
+			if hash_table[hash_address][index][0] == index_key: # 배열에서 index 번째 요소의 0번째 요소가 index_key와 같다면
+				hash_table[hash_address][index][1] = value # 첫번째 요소를 value 로 해줌, 즉 바뀌는 것이 없음. 왜 이렇게 했을까?
+				return
+		hash_table[hash_address].append([index_key, value]) # 해당하는 값이 없다면, 새로운 배열(키값과 value)를 append 시켜줌
+	else:
+		hash_table[hash_address] = [[index_key, value]] # 만약 해시테이블에서 hash_table[hash_address] == 0 이면 그냥 값을 할당해줌
+```
+
+```python
+print(hash('Dave') % 8)
+print(hash('Dd') % 8)
+print(hash('Data') % 8)
+
+# 5 5 6
+```
+
+```python
+save_data('Dave', '1201023010')
+save_data('Data', '3301023010')
+save_data('Dave', '01034340992')
+
+print(hash_table)
+
+[0,
+ 0,
+ 0,
+ 0,
+ 0,
+ [[2517405733183364333, '1201023010'], [-464815633440241563, '01034340992']],
+ [[4167812268688963486, '3301023010']],
+ 0]
+```
+
+### 6.2. Linear Probing 기법
+
+- 체이닝 기법에 반대 개념
+- 폐쇄해싱, 또는 Close Hashing 기법 중 하나: **해쉬 테이블 저장공간 '안'에서** 충돌문제를 해결하는 기법
+- 충돌이 일어나면, 해당 hash address의 다음 address부터 맨 처음 나오는 빈공간에 저장하는 기법
+  - **저장공간 활용도를 높이기 위한 기법**
+
+<div class="alert alert-block alert-warning">
+<strong><font color="blue" size="3em">연습3: 연습1의 해쉬 테이블 코드에 Linear Probling 기법으로 충돌해결 코드를 추가해보기</font></strong><br>
+1. 해쉬 함수: key % 8<br>
+2. 해쉬 키 생성: hash(data)
+</div>
+
+```python
+hash_table = list([0 for i in range(8)])
+
+def get_key(data):
+	return hash(data)
+
+def hash_function(key):
+	return key % 8
+
+def save_data(data, value):
+	index_key = get_key(data)
+	hash_address = hash_function(index_key)
+	if hash_table[hash_address] != 0: # 해시테이블에서 입력된 data에 해당하는 해시테이블에 데이터가 있는경우? 즉 충돌이 일어난 경우다.
+		for index in range(hash_address, len(hash_table)): # hash_address 부터 hash_table. 길이까지 순회한다.
+		# Linear Probing = Close Hashing 의 경우, 충돌이 일어나면 해당 hash address 의 다음 address 부터
+		# 처음 나오는 빈공간에 저장하는거기 때문.
+			if hash_table[index] == 0: # 순회 요소가 0인경우: 즉 데이터가 없는 경우는 바로 삽입
+				hash_table[index] = [index_key, value]
+				return
+			elif hash_table[index][0] == index_key: # 데이터가 있고, 0번째 요소가 같으면 업데이트 해주기
+				hash_table[index][1] = value
+				return
+
+	 else:
+		 hash_table[hash_address] = [index_key, value] # 빈공간이면 데이터 바로 삽입
+
+def read_data(data):
+	index_key = get_key(data)
+	hash_address = hash_function(index_key)
+
+	if hash_table[hash_address] != 0:
+		for index in range(hash address, len(hash_table)):
+			if hash_table[index] == 0:
+				return None
+			elif hash_table[index][0] == index_key:
+				return hash_table[index][1]
+	else:
+		return None
+```
+
+- read_data를 왜 이런식으로 작성했는지 모르겠다. 그냥 data 를 가지고 hash_address 검색 후, 값이 있으면 표기하고 아니면 None 을 리턴하면 되는것 아닌가?
+- 위에 식에서는 한번 순회하고, 값이 없으면 none을 리턴한다고 중복으로 써놓았다.
+
+```python
+print( hash('dk') % 8)
+print( hash('da') % 8)
+print( hash('dc') % 8)
+
+# 7 2 4
+```
+
+```python
+save_data('dk', '01200123123')
+save_data('da', '333333333')
+save_data('dc', '01034340992')
+
+print(hash_table)
+```
+
+```python
+[0, 0, [-8247022340911430670, '3333333333'], 0, [8923840923840239,'01034340992'], 0, 0, [4625843833139520663, '01200123123']]
 ```
