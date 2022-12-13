@@ -318,6 +318,54 @@ print(hash_table)
 [0, 0, [-8247022340911430670, '3333333333'], 0, [8923840923840239,'01034340992'], 0, 0, [4625843833139520663, '01200123123']]
 ```
 
+### 6.3. 빈번한 충돌을 개선하는 기법
+
+- 해쉬 함수를 재정의 및 해쉬 테이블 저장공간을 확대
+- 예:
+
+```python
+has_table = list([None for I in range(16)])
+
+def hash_function(key):
+	return key % 16
+
+# 기존 8개 에서 16개로 저장공간을 확대
+```
+
+### 참고 : 해쉬 함수와 키 생성함수
+
+- 파이썬의 hash() 함수는 실행할 때마다, 값이 달라질 수 있음
+- 유명한 해쉬 함수들이 있음: SHA( Secure Hash Algorithm, 안전한 해시 알고리즘)
+  - 어떤 데이터도 유일한 고정된 크기의 고정값을 리턴해주므로, 해쉬 함수로 유용하게 활용가능
+
+#### SHA-1
+
+```python
+import hashlib
+
+data = 'test'.encode()
+hash_obect = hashlib.sha1()
+hash_object.update(data)
+hex_dig = hash_object.hexdigest()
+print (hex_dig)
+
+# a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
+```
+
+#### SHA-256
+
+```python
+import hashlib
+
+data = 'test'.encode()
+hash_object = hashlib.sha256()
+hash_object.update(data)
+hex_dig = hash_object.hexdigest()
+print (hex_dig)
+
+# 9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08
+```
+
 ## 7. 시간 복잡도
 
 - 일반적인 경우(Collision 이 없는 경우) 는 O(1)
