@@ -50,7 +50,7 @@ domains: [
 
    - 앞서 설명한것 처럼 이미지를 '**뷰포트 기준**'으로 어떤 사이즈로 출력할지 지정하게 됨
    - `intrinsic` 은 default 값으로 container 의 width 에 fit 하게 축소시킴.
-   - layout 이 `responsive ` 나 `fill` 인 경우를 사용하기 위해 부모 요소에 따로 설정이 필요하다.
+   - layout 이 `responsive ` 나 `fill` 인 경우를 사용하기 위해 부모 요소에 따로 설정이 필요하다. 요고 중요!!
      - responsive: `display: block`
      - fill: `position: relative`
 
