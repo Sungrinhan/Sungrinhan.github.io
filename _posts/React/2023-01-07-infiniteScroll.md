@@ -1,6 +1,6 @@
 ---
 title: "[React] React-infinite-scroll 구현하기"
-date: 2023-01-08 178:09:SS +/- TTTT
+date: 2023-01-08 17:09:SS +/- TTTT
 categories: [React]
 tags: [react, infinite scroll] # TAG는 반드시 소문자로 이루어져야함!
 ---
