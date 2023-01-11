@@ -72,16 +72,69 @@ function MyComponent() {
 window.innerHeight + window.scrollY >= document.body.offsetHeight;
 ```
 
-내 프로젝트 기준은 window 가 아니므로, 코드를 수정할 필요가 있다고 느꼈다.
+내 프로젝트 기준은(element) window 가 아니므로, 코드를 수정할 필요가 있다고 느꼈다.
 
 ```ts
 // 다음 코드는 예시다.
-const contentDiv = document.querySelector(".real-content-div");
+const contentDiv = document.querySelector('.real-content-div')
 
-contentDiv.scrollTop + contentDiv.clientHeight >= contentDiv.scrollHeight;
+contentDiv.scrollTop + contentDiv.clientHeight >= contentDiv.scrollHeight
+
+// 실제 예제
+useEffect(() => {
+	const  layoutContent  =  document.querySelector('.ant-spin-container');
+
+	const  handleScroll  =  _.throttle(() => {
+		if (layoutContent.scrollTop  + windowHeight >=  layoutContent.scrollHeight) {
+			console.log('스크롤이 하단에 닿아서 이벤트가 발생함')
+		} else {
+
+		return;
+		}
+	}
+});
+
+// layoutContent 에 'scroll' 이벤트를 추가한다. 이벤트 함수명은 handleScroll~
+layoutContent.addEventListener('scroll', handleScroll);
+
+return () =>  layoutContent.removeEventListener('scroll', handleScroll);
+}, [pageStoreList]);
 ```
 
 - 실제 컨텐츠가 들어있는 dom 을 가져와서, `scrollTop`, `clientHeight`, `scrollHeight `를 쓰면되겠다.
 - 하지만 여기서는 `clientHeight` 와 `scrollheight` 가 상품목록이 늘어날수록 커지는 것을 확인했지만, 역시나 `scrollTop` 이 계속 0을가리키며 변하지 않았다.
 
-  2023.01.08 업데이트 중...
+### Solution
+
+당연하지만 , 위의 코드는 작동하지 않을 것이다. 왜냐?? css 를 적용하지 않았기 때문이지롱~
+
+실제 layout 컨텐츠에서 부모태그에는 다음과 같은 css 가 적용되어야 한다. mdn 에 나와있는 내용이니까 잘 숙지하자!
+
+- 컨텐츠를 감싸고 있는 부모요소는 스크롤이 생길 수 있게 높이가 고정되어야 한다.
+  - ex) 100vh, px, 등등.
+  - but % 비율은 안됨. 컨텐츠 내용이 늘어남에 따라 height 도 늘어나서 스크롤이 생기지 않는다.
+- `overflow: scroll` 이 부모속성에 있어야한다.
+
+### 추가적으로 알아야 할 것 ( loadsh 의 throttle 기능)
+
+위에 코드에서 layoutContent 에 이벤트 리스너를 추가했다. 따라서 스크롤이하단에 닿을때 마다(if 문이 충족될 때 마다) handlescroll 함수를 실행시키게 된다.
+
+물론 또다른 조건문으로 실행되지 않게 할 수도 있지만, documentElement.scrollTop과 documentElement.offsetHeight는 리플로우(Reflow)가 발생하는 참조이기 때문에 수정해야 할 필요가 있다.
+
+> throttle 이란...?
+> 일정시간 내에 이벤트가 여러번 발생하면, 이벤트를 저장했다가 한번만 실행시키게 해주는 함수다.
+> 즉 일정 주기마다 이벤트발생을 보장하기 때문에, 여기서는 throttle 을 사용하는게 좋았다.
+
+```ts
+const handleScroll = _.throttle(() => {
+  if (layoutContent.scrollTop + windowHeight >= layoutContent.scrollHeight) {
+    console.log("스크롤이 하단에 닿아서 이벤트가 발생함");
+  } else {
+    return;
+  }
+}, 1000);
+```
+
+## 출처
+
+[실전 Infinite Scroll with React](https://tech.kakaoenterprise.com/149)
