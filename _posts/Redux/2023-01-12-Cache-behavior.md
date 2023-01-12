@@ -1,5 +1,5 @@
 ---
-title: "[Redux][Query] About Redux ToolKit Query"
+title: "[Redux][Query] RTK Query 캐시 조작하기"
 date: 2023-01-12 11:30:SS +/- TTTT
 categories: [Redux, RTK]
 tags: [redux, query, rtk, cachebehavior] # TAG는 반드시 소문자로 이루어져야함!
