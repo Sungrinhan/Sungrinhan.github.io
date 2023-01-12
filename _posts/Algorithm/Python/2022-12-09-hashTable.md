@@ -1,7 +1,7 @@
 ---
 title: "[Algorithm] 해시 테이블(hash table)"
 date: 2022-12-09 14:25:SS +/- TTTT
-categories: [Algorithm]
+categories: [Algorithm, Python]
 tags: [algorithm, hash] # TAG는 반드시 소문자로 이루어져야함!
 ---
 
