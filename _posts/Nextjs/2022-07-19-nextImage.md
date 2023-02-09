@@ -1,7 +1,7 @@
 ---
 title: "[Nextjs/Image] Next에서 Imgae 태그"
 date: 2022-07-19 11:30:SS +/- TTTT
-categories: [Nextjs, Image]
+categories: [NextJs, Image]
 tags: [nextjs, image] # TAG는 반드시 소문자로 이루어져야함!
 ---
 

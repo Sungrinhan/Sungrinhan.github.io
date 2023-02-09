@@ -1,7 +1,7 @@
 ---
 title: "[Next]Dynamic Import "
 date: 2022-12-24 20:56:SS +/- TTTT
-categories: [Nextjs]
+categories: [NextJs]
 tags: [nextjs, dynamic import] # TAG는 반드시 소문자로 이루어져야함!
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "[Nextjs] Next에서 _app, _document에 대해서"
 date: 2022-08-31 16:22:SS +/- TTTT
-categories: [Nextjs]
+categories: [NextJs]
 tags: [nextjs, app, document] # TAG는 반드시 소문자로 이루어져야함!
 ---
 

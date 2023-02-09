@@ -1,7 +1,7 @@
 ---
 title: "[Next][Mocking] MSW, Next에서 사용해보자"
 date: 2022-12-05 14:59:SS +/- TTTT
-categories: [Nextjs]
+categories: [NextJs]
 tags: [nextjs, msw] # TAG는 반드시 소문자로 이루어져야함!
 ---
 
