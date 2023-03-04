@@ -84,7 +84,10 @@ module.exports = {
 - Akamai
 - Custom: loader: 'custom' 은 next/image 컴포넌트에 loader prop 을 구현하여 커스텀 클라우드 제공자를 사용함.
 
-## 출처
+> Images can not be optimized at build time using 'next export', only on-demand.
+> To use 'next/image' with 'next export', you will need to use a different loader than the default.
+> [Read about discussion](https://github.com/vercel/next.js/discussions/19065)
 
-[Next.js 공식 다큐먼트](https://nextjs.org/docs/api-reference/next/image#built-in-loaders)
-[birdmee 블로그](https://birdmee.tistory.com/38)
+즉 ? 결론은 'next export' 는 next 의 기본로더랑 같이 사용할 수 없음. 따라서 next.config.js 에서 loader 값을 지정해줘야됨.
+
+-> 나같은 경우는 akamai 로 바꿔주고, 기본 path는 '' 빈 tring 값을주었음. 그랬더니 export 가 에러없이 잘 되어서 aws 에 올릴 수 있었따! 해결!
