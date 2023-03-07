@@ -91,3 +91,8 @@ module.exports = {
 즉 ? 결론은 'next export' 는 next 의 기본로더랑 같이 사용할 수 없음. 따라서 next.config.js 에서 loader 값을 지정해줘야됨.
 
 -> 나같은 경우는 akamai 로 바꿔주고, 기본 path는 '' 빈 tring 값을주었음. 그랬더니 export 가 에러없이 잘 되어서 aws 에 올릴 수 있었따! 해결!
+
+## 출처
+
+[Next.js 공식 다큐먼트](https://nextjs.org/docs/api-reference/next/image#built-in-loaders)
+[birdmee 블로그](https://birdmee.tistory.com/38)
