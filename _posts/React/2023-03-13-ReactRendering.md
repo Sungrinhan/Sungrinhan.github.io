@@ -30,3 +30,104 @@ React 렌더링 최적화
   이런 이유로 인해서 리액트에서 리렌더링이 발생하는 시점은 state가 변했을 때다. 즉, **"state가 변하면 해당 컴포넌트를 포함한 하위 컴포넌트들은 모두 리렌더링 된다"** 라는 _<u>명확한 멘탈 모델을 이해하고 있는것이 리액트를 이용해서 애플리케이션을 설계하고, 최적화하는데 가장 기본이 되는 사항이다!_<u/>
 
 ### 1-3) 리액트의 렌더링 과정
+
+state 가 변화되고, 최종적으로 브라우저상의 UI 에 반영되기까지 각 컴포넌트에서는 크게 아래의 4단계를 거치게 된다.
+
+1. 기존 컴포넌트의 UI를 재사용할 지 확인
+2. 함수 컴포넌트: 컴포넌트 함수를 호출 / CLass 컴포넌트: `render` 메소드를 호출
+3. 2의 결과를 통해서 새로운 VirtualDOM 을 생성.
+4. 이전의 VirtualDOM 과 새로운 VirtualDOM 을 비교, 실제 변경된 부분만 DOM 에 적용.
+
+> 일반적인 CRP (Cirtical Rendering Path) :
+>
+> 1. HTML 을 파싱해서 DOM 을 만든다.
+> 2. CSS를 파싱해서 CSSOM 을 만든다.
+> 3. DOM 과 CSSOM을 결합해서 Render Tree 를 만든다.
+> 4. Render Tree와 Viewport 의 width를 통해서 각 요소들의 위치와 크기를 계산함.(Layout)
+> 5. 지금까지 계산된 정보를 이용해 Render Tree 상의 요소들을 실제 Pixel로 그려냄 (Paint)
+>
+> DOM 또는 CSSOM 이 수정될 때 마다 위 과정을 반복한다.
+> -> 따라서 이 과정을 최적화 하는 것이 퍼포먼스상에 중요 포인트!
+
+리액트는 CRP 이 수행되는 횟수를 최적화 하기 위해서 VirtualDOM 을 사용함! ( DOM과 유사한 객체형태로 만들어냄)
+
+UI를 변화하기 위해서는 많은 DOM 조작이 필요. 리액트는 이런 브라우저의 많은 연산과 낮은 퍼포먼스의 향상을 위해 VirtualDOM 이란 개념을 도입.
+
+리액트를 사용하는 개발자가 할 수 있는 최적화는 :
+
+1. 기존 컴포넌트의 UI를 재사용할 지 확인한다.
+2. 컴포넌트 함수가 호출되면서 만들어질 VirtualDOM 의 형태를 비교적 차이가 적은 형태로 만들어지도록 한다. 예를들어, `<div>` tag 를 `<span>` 으로 변환시키는 것 보다 `<div className='block' />` 을 `<div className='inline />`으로 변환시키는 것이 VirtualDOM 끼리 비교했을 때 차이가 적은 형태로 만들어지도록 하는 것.
+
+`기존 컴포넌트의 UI를 재사용할지 확인` 하는 법에 대해 자세히 알아보자.
+
+## 2. 기존의 컴포넌트의 UI 를 재사용할 지 판단하는 방법
+
+리액트는 state 가 변할 경우 해당 컴포넌트와 하위의 컴포넌트들을 모두 리렌더링한다.
+
+그런데? state 가 변한 컴포넌트는 당연히 UI 변화가 있겠지만, props 가 변화하지 않은 하위 컴포넌트가 있다면 ? 이런 경우에는 굳이 새롭게 컴포넌트 함수를 호출할 필요없이 이전에 저장되어 있던 결과를 그대로 사용하는 것이 효율적이다!
+
+하지만 UI가 실질적으로 변화되었는지를 매번 리액트가 렌더링 과정에서 일일이 모든 컴포넌트 트리를 순회하면서 검사하는 것은 비효율적.
+
+리액트는 개발자에게 이것을 명시할 수 있는 `React.memo` 함수를 제공하고 이를통해 `기존의 컴포넌트의 UI 를 재사용할 지 판단하는 방법` 을 정해놨다...!
+
+### 2-1) React.memo
+
+```ts
+const MyComponent = React.memo(function MyComponent(props) {
+  /* render using props */
+});
+```
+
+React.memo 는 HOC (Higher Order Component) 다.
+HOC 란 컴포넌트를 인자로 받아서 컴포넌트를 리턴하는 컴포넌트.
+아니 뭐이리 복잡하지 ? 결국 컴포넌트를 감싼 컴포넌트인 것!
+
+```ts
+function HOC(Component) {
+  /* do something */
+  return <Component />;
+}
+```
+
+이전 컴포넌트의 Props 와 다음 렌더링 때 사용될 Props 를 비교해서 차이가 있을 경우에만 리렌더링을 수행한다. 차이가 없다면 ? 기존 렌더링 결과를 재사용함 (Memoization 이랑 개념이 비슷한거 같기도? )
+
+-> 즉, 컴포넌트에서 불필요하게 리렌더링이 되는 경우를 막을 수 있음 !
+
+> ### Props 를 비교하는 방식
+>
+> React.memo 는 기본적으로 props 의 변화를 `shallow compare` 함.
+> 이러한 기본 비교 로직을 사용하지 않고 비교를 판단하는 로직을 직접 작성하고 싶을 경우를 대비해서, 변화를 판단하는 함수를 두번째 인자로 받을 수 있도록 설정해놨다.
+> 판단하는 함수의 return 값이 true, false 인지에 따라 리렌더링 할지를 결정한다.
+> 다음은 예시코드다.
+
+```ts
+function MyComponent(props) {
+  /* render using props */
+}
+
+function areEqual(prevProps, nextProps) {
+  /*
+	true를 return 할 경우 이전 결과를 재사용
+	false를 return 할 경우 리렌더링을 수행
+	*/
+}
+
+export default React.memo(MyComponent, areEqual);
+```
+
+예시: https://codesandbox.io/s/react-memo-vzn7ql?file=/src/App.js
+
+### 2-2) 불변성
+
+불변성이란?
+
+- 값이 변하지 않는 것.
+- 원시타입은 모두 불변
+
+```ts
+let dog = "tori";
+
+dog = "mozzi";
+```
+
+변수에 할당된 값을 변경 x, "mozzi" 라는 새로운 string을 만들고 `교체` 하는 식으로 동작한다.
