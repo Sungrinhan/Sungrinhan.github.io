@@ -102,6 +102,10 @@ question: When do we use Map object in production? give me an example we need to
 3.  Configuration management: Map objects can be used to store configuration data for an application. For example, you could store key-value pairs that represent the settings for the application, such as database connection settings or user preferences.
 4.  Language translation: Map objects can be used to store translations of words or phrases in different languages. Each key in the map represents a word or phrase in a source language, and the value associated with that key represents the translation in the target language.
 
+## 업데이트
+
+- (2023.04.13) 알고리즘으로 구현해야 하는 경우 매우 편하다. hash 객체로 만들 때 써보니 매우매우 편리. 시간복잡도도 매우 줄어든다
+
 ## 출처
 
 [JavaScript 표준 내장 객체 Map(MDN)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)
