@@ -105,6 +105,16 @@ const myLoader = ({ src, width, quality=75} ) => {
 }
 ```
 
+## Dummy Image Generator (2023-04-26 내용추가)
+
+최근 내 블로그를 보고 Dummy Image Generator 를 추천해준 친구가 있다. 메일까지 보내준 것을 보면 고마운 친구다.
+
+### Dummy Image Generator 란?
+
+웹사이트 혹은 랜딩페이지를 생성할 때, 이미지가 아직 준비가 되지 않으면 placeholders 로 더미 이미지를 사용할 수 있다. 즉, 좋은 사용자 경험을 유지시키기 위해 쓰는 더미 이미지인 것이다.
+
+나같은 경우, api 요청이 끝나고 paint 단계가 이루어지기 전까지는 skeleton 으로 보여줬는데 이때 같이 사용하면 좋을 것 같다.
+
 ## 참조
 
 https://velog.io/@joy37/NextImage%EC%97%90-%EB%8C%80%ED%95%B4-%EC%96%BC%EB%A7%8C%ED%81%BC-%EC%95%8C%EC%95%84
