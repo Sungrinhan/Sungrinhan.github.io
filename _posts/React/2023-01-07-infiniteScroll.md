@@ -115,7 +115,7 @@ return () =>  layoutContent.removeEventListener('scroll', handleScroll);
   - but % 비율은 안됨. 컨텐츠 내용이 늘어남에 따라 height 도 늘어나서 스크롤이 생기지 않는다.
 - `overflow: scroll` 이 부모속성에 있어야한다.
 
-### 추가적으로 알아야 할 것 ( loadsh 의 throttle 기능)
+### 추가적으로 알아야 할 것 ( lodash 의 throttle 기능)
 
 위에 코드에서 layoutContent 에 이벤트 리스너를 추가했다. 따라서 스크롤이하단에 닿을때 마다(if 문이 충족될 때 마다) handlescroll 함수를 실행시키게 된다.
 
