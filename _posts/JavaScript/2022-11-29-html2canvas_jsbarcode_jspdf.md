@@ -183,7 +183,7 @@ export default makePdf;
 		}
 	};
 
-	return  <FilePdfOutlined  style={{ fontSize:  '20px', color:  'red' }} onClick={onClick} />;
+	return  <FilePdfOutlined  style={%raw%}{{ fontSize:  '20px', color:  'red' }}{%endraw%} onClick={onClick} />;
 	},
 },
 ```

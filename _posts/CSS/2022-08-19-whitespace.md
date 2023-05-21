@@ -42,7 +42,7 @@ const Meta = Card.Meta
 <Meta
   // Card.Meta 의 <Meta> 태그는 타입이 'ReactNode'
   // 따라서 white-space 가 아닌, whitespace 로 설정해야한다.
-  style={{ whiteSpace: 'pre-line'}}
+  style={%raw%}{{ whiteSpace: 'pre-line'}}{%endraw%}
   description = { "대표운영자 ID를 입력하고 연동시작일을 설정하면 자동으로 연동이 됩니다. \n 카페24 연동하러 가기" }
 >
 ```

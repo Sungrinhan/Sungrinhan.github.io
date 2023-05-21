@@ -61,10 +61,10 @@ export default function App() {
   return (
     <>
       <h1
-        style={{
+        style={%raw%}{{
           backgroundColor: isLightMode ? "white" : "black",
           color: isLightMode ? "black" : "white",
-        }}
+        }}{%endraw%}
       >
         current mode: {isLightMode ? "Light Mode" : "Dark Mode"}
       </h1>
