@@ -8,9 +8,9 @@ order: 4
   
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=SungrinHan's%20Github&desc=I%20am%20Frontend-Developer%20Junior&fontSize=50&descAlign=61)
 
-안녕하세요! :wave: <br/>
-이제 2년차 프론트엔드 주니어개발자 :seedling: <br/>
-한성린 입니다. 반가워요 :smile: <br/>
+안녕하세요! 👋 <br/>
+이제 2년차 프론트엔드 주니어개발자 🌱 <br/>
+한성린 입니다. 반가워요 😄 <br/>
 
   <br/>
   <br/>
@@ -18,7 +18,7 @@ order: 4
   <br/>
   
    
- :house: **My Blog** :house:
+🏠 **My Blog** 🏠
   
   <br/>  
   
@@ -28,7 +28,7 @@ order: 4
   <br/>
   <br/>
 
-:books: **Programming Language** :books:
+📘 **Programming Language** 📘
 
   <br/>  
   <img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black">
@@ -56,7 +56,7 @@ order: 4
   <br/>  
   
   
-  :speech_balloon: **Others** :speech_balloon:
+ 💬 **Others** 💬
   
   <br/>
   <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white">
@@ -64,14 +64,12 @@ order: 4
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">
   <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=Slack&logoColor=black">
 
-
   <br/>
   <br/>
   <br/>
   <br/>
   
 ![Sungrinhan's GitHub stats](https://github-readme-stats.vercel.app/api?username=Sungrinhan&count_private=true&show_icons=true&theme=merko)
-  
 
 
 </div>
