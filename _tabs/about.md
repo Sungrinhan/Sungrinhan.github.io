@@ -5,25 +5,17 @@ order: 4
 ---
 
 <div align="center">
+<br/>
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=SungrinHan's%20Github&desc=I%20am%20Frontend-Developer%20Junior&fontSize=50&descAlign=61)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=SungrinHan's%20Github&desc=I%20am%20Frontend-Developer%20Junior&fontSize=50&descAlign=61"/>
+
+<br/>
 
 안녕하세요! 👋 <br/>
 이제 2년차 프론트엔드 주니어개발자 🌱 <br/>
 한성린 입니다. 반가워요 😄 <br/>
 
   <br/>
-  <br/>
-  <br/>
-  <br/>
-  
-   
-🏠 **My Blog** 🏠
-  
-  <br/>  
-  
-   <a href="https://sungrinhan.github.io/" target="_blank"><img src="https://img.shields.io/badge/DevBlog-FF5722?style=flat-square&logo=Blogger&logoColor=white"/></a> <- Link
-   
   <br/>
   <br/>
   <br/>
@@ -69,6 +61,8 @@ order: 4
   <br/>
   <br/>
 
-![Sungrinhan's GitHub stats](https://github-readme-stats.vercel.app/api?username=Sungrinhan&count_private=true&show_icons=true&theme=merko)
+<img src="https://github-readme-stats.vercel.app/api?username=Sungrinhan&count_private=true&show_icons=true&theme=merko" />
+
+<br/>
 
 </div>
