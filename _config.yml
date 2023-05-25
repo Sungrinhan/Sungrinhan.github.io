@@ -26,10 +26,10 @@ description: >- # used by seo meta and the atom feed
   한성린의 블로그
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://SungrinHan.github.io/"
+url: "https://sungrinhan.github.io/"
 
 github:
-  username: SungrinHan # change to your github username
+  username: Sungrinhan # change to your github username
 
 twitter:
   username: twitter_username # change to your twitter username
@@ -37,7 +37,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: SungrinHan
+  name: Sungrinhan
   email: sungrin92@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
