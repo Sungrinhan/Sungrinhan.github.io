@@ -1,11 +1,11 @@
 ---
-title: "[Next]Server Components(13v) "
+title: "[Next v13]React Essentials (1) "
 date: 2023-06-20 19:33:SS +/- TTTT
 categories: [NextJs]
 tags: [nextjs, servercomponent] # TAG는 반드시 소문자로 이루어져야함!
 ---
 
-# React Essentials (Next.js 13v)
+# React Essentials (Next.js 13v) (1)
 
 Next.js 로 어플리케이션을 구축하면, Server Components 와 같은 React 의 최신 기능에 익숙해지는 것에 도움이 된다.
 
