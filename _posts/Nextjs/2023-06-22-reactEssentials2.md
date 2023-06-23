@@ -45,6 +45,34 @@ export async function getData() {
 
 그래서 이 함수는 서버에서만 실행되어야 하는 이유다.
 
+### The "server only" package
+
+의도치 않은 서버코드를 클라이언트에서의 사용을 막기 위해, 우리는 `server-only` package 를 설치하여 빌드타임 에러를 낼 수 있다.
+
+```ts
+npm i server-only
+```
+
+이후에는, server only 를 import 하면 된다.
+
+```ts
+import "server-only";
+
+export async function getData() {
+  const res = await fetch("https://external-service.com/data", {
+    headers: {
+      authorization: process.env.API_KEY
+    }
+  });
+
+  return res.json();
+}
+```
+
+이제는 `getData()`를 실수로 Client Component 에서 import 해도, 빌드 타임에서 server 에서만 사용이 가능하다고 에러를 낼 것이다.
+
+server-only 말고도 `client-only`라는 모듈도 있다. 예를들어 `window` 객체를 사용하는 경우, 클라에서만 사용가능 하기 때문에 해당 모듈을 사용해도 된다.
+
 ---
 
 > 출처
