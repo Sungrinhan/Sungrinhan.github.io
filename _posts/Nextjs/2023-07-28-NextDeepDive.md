@@ -5,8 +5,6 @@ categories: [NextJs]
 tags: [nextjs, routing] # TAG는 반드시 소문자로 이루어져야함!
 ---
 
-[Next.js] 13v deep dive(1) - routing 기초
-
 모든 애플리케이션의 골격은 라우팅이다. 이번 블로깅에서 부터는 나만의 Next.js - Deep Dive 를 정리해보려 한다.
 
 # 1. The `app` Router
