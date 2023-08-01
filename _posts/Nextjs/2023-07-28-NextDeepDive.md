@@ -104,6 +104,15 @@ Next.js 에서는 중첩된 경로에서 특정 상황을 나타내주는 UI를 
 
 알고있는 사실이지만 적어보았다. 간혹 너무나도 당연하게 생각해서 이렇게 하는 목적을 까먹을 수 있기 때문에 적어보았다. ㅎㅎ
 
+# 7. 심화 라우팅 패턴
+
+- Parallel Routes: 독립적으로 탐색할 수 있는 두개 이상의 페이지를 하나의 view 로 표시할 수 있다. split view로 보여줄 수 있음 (예를들어 대쉬보드)
+- Intercepting Routes: 경로를 다로채 다른 경로의 컨텍스트에 표시할 수 있다. 현재 페이지에서 context 를 유지하는 것이 중요할 때 사용가능! (예를들어 하나의 작업을 편집하거나 피드에서 사진을 확장하는 동안 모든 작업보기)
+
+자세한 advanced routing pattern 을 알아보자.
+
+## 1. Parallel Routes
+
 > 출처
 >
 > - [Next.js 공식문서](https://nextjs.org/docs/app/building-your-application/routing#partial-rendering)
