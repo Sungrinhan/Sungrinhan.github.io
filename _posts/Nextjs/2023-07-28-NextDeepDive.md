@@ -113,6 +113,24 @@ Next.js 에서는 중첩된 경로에서 특정 상황을 나타내주는 UI를 
 
 ## 1. Parallel Routes
 
+### a. 대시보드 혹은 피드
+
+소셜 사이트의 대시보드 혹은 피드와 같이 **매우 동적인** 애플리케이션의 경우, 병렬 라우팅을 사용하여 복잡한 라우팅 패턴을 구현할 수 있다!
+
+![](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fparallel-routes.png&w=3840&q=75&dpl=dpl_DMzbjJ6qfcbNz3HGySe9uGAgJ5sK)
+
+### b. 독립적인 에러, 로딩 상태
+
+병렬 라우팅을 사용하면, 독립적으로 fetch(스트리밍) 되는 각 경로(라우트)에 대해 독립적인 에러 바운더리, suspense boundary 상태를 정의할 수 있다.
+
+![](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fparallel-routes-cinematic-universe.png&w=3840&q=75&dpl=dpl_DMzbjJ6qfcbNz3HGySe9uGAgJ5sK)
+
+### c. 조건부 슬롯 렌더링
+
+병렬 라우팅을 사용하면 인증상태와 같은 특정 조건에 따라 슬롯을 렌더링할 수 있다. 이렇게 하면 동일한 URL 에서 완전히 분리된 코드를 사용할 수있다.
+
+![](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fconditional-routes-ui.png&w=3840&q=75&dpl=dpl_DMzbjJ6qfcbNz3HGySe9uGAgJ5sK)
+
 > 출처
 >
 > - [Next.js 공식문서](https://nextjs.org/docs/app/building-your-application/routing#partial-rendering)
