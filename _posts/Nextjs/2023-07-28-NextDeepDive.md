@@ -131,6 +131,14 @@ Next.js 에서는 중첩된 경로에서 특정 상황을 나타내주는 UI를 
 
 ![](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fconditional-routes-ui.png&w=3840&q=75&dpl=dpl_DMzbjJ6qfcbNz3HGySe9uGAgJ5sK)
 
+### Convention
+
+Parallel routes 는 슬롯을 사용하여 생성된다. 슬롯은 `@folder` 규칙으로 정의되고, 동일한 레벨의 레이아웃에 props 로 전달된다.
+
+다음과 같은 예시를 보자. 파일 구조는 두개의 명시적 슬롯을 정의한다: `@analytics` 와 `@team`.
+
+![](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fparallel-routes-file-system.png&w=3840&q=75&dpl=dpl_DMzbjJ6qfcbNz3HGySe9uGAgJ5sK)
+
 > 출처
 >
 > - [Next.js 공식문서](https://nextjs.org/docs/app/building-your-application/routing#partial-rendering)
