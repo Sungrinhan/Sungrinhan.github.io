@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-css-flexbox-기초",
+            },{id: "post-javascript-프레임워크인-react-js-학습을-추천드립니다",
+        
+          title: "JavaScript 프레임워크인 React.js 학습을 추천드립니다.",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/javascript-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%9D%B8-react.js-%ED%95%99%EC%8A%B5%EC%9D%84-%EC%B6%94%EC%B2%9C%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4/";
+          
+        },
+      },{id: "post-css-flexbox-기초",
         
           title: "CSS Flexbox 기초",
         
