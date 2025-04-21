@@ -10,7 +10,7 @@ function gitCommitAndPush() {
   console.log("Start Git commit & push...");
 
   try {
-    execSync("git add _posts/ topics.json", { stdio: "inherit" });
+    execSync("git add .", { stdio: "inherit" });
     execSync(`git commit -m "auto: add blog post and topic for today"`, {
       stdio: "inherit",
     });
