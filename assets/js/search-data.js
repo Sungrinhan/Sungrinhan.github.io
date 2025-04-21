@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-javascript-프레임워크인-react-js-학습을-추천드립니다",
+            },{id: "post-react-js에-이어서-상태-관리-라이브러리인-redux를-학습하는-것을-추천드립니다",
+        
+          title: "React.js에 이어서 상태 관리 라이브러리인 Redux를 학습하는 것을 추천드립니다.",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/react.js%EC%97%90-%EC%9D%B4%EC%96%B4%EC%84%9C-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%B8-redux%EB%A5%BC-%ED%95%99%EC%8A%B5%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%84-%EC%B6%94%EC%B2%9C%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4/";
+          
+        },
+      },{id: "post-javascript-프레임워크인-react-js-학습을-추천드립니다",
         
           title: "JavaScript 프레임워크인 React.js 학습을 추천드립니다.",
         

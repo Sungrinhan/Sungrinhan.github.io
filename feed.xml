@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://sungrinhan.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://sungrinhan.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-04-21T14:46:41+00:00</updated><id>https://sungrinhan.github.io/feed.xml</id><title type="html">성린s 메모장</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">CSS Flexbox 기초</title><link href="https://sungrinhan.github.io/blog/2025/css-flexbox-%EA%B8%B0%EC%B4%88/" rel="alternate" type="text/html" title="CSS Flexbox 기초"/><published>2025-04-21T00:00:00+00:00</published><updated>2025-04-21T00:00:00+00:00</updated><id>https://sungrinhan.github.io/blog/2025/css-flexbox-%EA%B8%B0%EC%B4%88</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2025/css-flexbox-%EA%B8%B0%EC%B4%88/"><![CDATA[<hr/> <p>layout: post title: CSS Flexbox 기초 —</p> <p>CSS <strong>Flexbox</strong>는 웹페이지 내의 객체들 간의 간격과 위치를 보다 유연하게 조정할 수 있는 웹 디자인 기법인 Responsive Design의 일환입니다. <strong>Flexbox</strong>는 ‘Flexible Box’의 줄임말로, 유연성을 바탕으로 웹페이지의 레이아웃을 쉽게 구성하는 데 사용됩니다. 이 포스트에서는 Flexbox의 기본 개념을 배우고 실제 코드 예시와 함께 실무에서 어떻게 활용할 수 있는지 살펴보겠습니다.</p> <p>Flexbox는 Flex Container와 Flex Items으로 구성되며, Flex Container 안에 있는 Flex Items의 배열을 조절합니다. Flexbox의 주요 속성은 다음과 같습니다:</p> <ol> <li><code class="language-plaintext highlighter-rouge">flex-direction</code> : 항목들이 배치될 주 축을 설정합니다. row(기본값), row-reverse, column, column-reverse 중 하나를 설정할 수 있습니다.</li> <li><code class="language-plaintext highlighter-rouge">justify-content</code> : 주 축의 공간 분배를 설정합니다.</li> <li><code class="language-plaintext highlighter-rouge">align-items</code> : 교차 축의 정렬을 설정합니다.</li> <li><code class="language-plaintext highlighter-rouge">flex-wrap</code> : 항목들을 한 줄에 강제 배치할지, 여러 줄로 나누어 배치할지 설정합니다.</li> <li><code class="language-plaintext highlighter-rouge">flex-flow</code> : flex-direction과 flex-wrap을 한번에 설정하는 단축 속성입니다.</li> <li><code class="language-plaintext highlighter-rouge">align-content</code> : 여러 줄 간의 간격 및 정렬을 설정합니다.</li> </ol> <p>실제 코드 예시를 살펴보겠습니다.</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.flex-container</span> <span class="p">{</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://sungrinhan.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://sungrinhan.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-04-21T14:48:08+00:00</updated><id>https://sungrinhan.github.io/feed.xml</id><title type="html">성린s 메모장</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">CSS Flexbox 기초</title><link href="https://sungrinhan.github.io/blog/2025/css-flexbox-%EA%B8%B0%EC%B4%88/" rel="alternate" type="text/html" title="CSS Flexbox 기초"/><published>2025-04-21T00:00:00+00:00</published><updated>2025-04-21T00:00:00+00:00</updated><id>https://sungrinhan.github.io/blog/2025/css-flexbox-%EA%B8%B0%EC%B4%88</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2025/css-flexbox-%EA%B8%B0%EC%B4%88/"><![CDATA[<hr/> <p>layout: post title: CSS Flexbox 기초 —</p> <p>CSS <strong>Flexbox</strong>는 웹페이지 내의 객체들 간의 간격과 위치를 보다 유연하게 조정할 수 있는 웹 디자인 기법인 Responsive Design의 일환입니다. <strong>Flexbox</strong>는 ‘Flexible Box’의 줄임말로, 유연성을 바탕으로 웹페이지의 레이아웃을 쉽게 구성하는 데 사용됩니다. 이 포스트에서는 Flexbox의 기본 개념을 배우고 실제 코드 예시와 함께 실무에서 어떻게 활용할 수 있는지 살펴보겠습니다.</p> <p>Flexbox는 Flex Container와 Flex Items으로 구성되며, Flex Container 안에 있는 Flex Items의 배열을 조절합니다. Flexbox의 주요 속성은 다음과 같습니다:</p> <ol> <li><code class="language-plaintext highlighter-rouge">flex-direction</code> : 항목들이 배치될 주 축을 설정합니다. row(기본값), row-reverse, column, column-reverse 중 하나를 설정할 수 있습니다.</li> <li><code class="language-plaintext highlighter-rouge">justify-content</code> : 주 축의 공간 분배를 설정합니다.</li> <li><code class="language-plaintext highlighter-rouge">align-items</code> : 교차 축의 정렬을 설정합니다.</li> <li><code class="language-plaintext highlighter-rouge">flex-wrap</code> : 항목들을 한 줄에 강제 배치할지, 여러 줄로 나누어 배치할지 설정합니다.</li> <li><code class="language-plaintext highlighter-rouge">flex-flow</code> : flex-direction과 flex-wrap을 한번에 설정하는 단축 속성입니다.</li> <li><code class="language-plaintext highlighter-rouge">align-content</code> : 여러 줄 간의 간격 및 정렬을 설정합니다.</li> </ol> <p>실제 코드 예시를 살펴보겠습니다.</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.flex-container</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
     <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">row</span><span class="p">;</span>
     <span class="nl">justify-content</span><span class="p">:</span> <span class="n">space-between</span><span class="p">;</span>
@@ -31,7 +31,36 @@
 
 <span class="kd">let</span> <span class="nx">store</span> <span class="o">=</span> <span class="nf">createStore</span><span class="p">(</span><span class="nx">counter</span><span class="p">);</span>
 <span class="nx">store</span><span class="p">.</span><span class="nf">dispatch</span><span class="p">({</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">INCREMENT</span><span class="dl">'</span> <span class="p">});</span>
-</code></pre></div></div> <p>응용 버전에서는 React를 웹뿐만 아니라 모바일 앱 개발에도 사용할 수 있는 <code class="language-plaintext highlighter-rouge">React Native</code>를 활용할 수 있습니다. 이를 통해 인터페이스의 일관성을 유지하면서도 플랫폼에 맞는 최적화된 경험을 제공할 수 있습니다.</p> <p>요약하자면, React.js는 사용하기 쉽고, 높은 확장성을 가진 프레임워크로서 개발자들에게 많은 이점을 제공합니다. 특히 컴포넌트를 사용한 재사용 가능한 코드 작성은 상당한 생산성 향상을 가져다 줍니다. 처음 시작하는 개발자들이라도 React.js의 도움을 받아 더 나은 웹 애플리케이션을 만들 수 있을 것입니다.</p>]]></content><author><name></name></author><category term="프론트엔드"/><category term="JavaScript"/><summary type="html"><![CDATA[layout: post title: JavaScript 프레임워크인 React.js 학습을 추천드립니다. date: 2021-10-01 categories: JavaScript tags: React.js —]]></summary></entry><entry><title type="html">a post with plotly.js</title><link href="https://sungrinhan.github.io/blog/2025/plotly/" rel="alternate" type="text/html" title="a post with plotly.js"/><published>2025-03-26T14:24:00+00:00</published><updated>2025-03-26T14:24:00+00:00</updated><id>https://sungrinhan.github.io/blog/2025/plotly</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2025/plotly/"><![CDATA[<p>This is an example post with some <a href="https://plotly.com/javascript/">plotly</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
+</code></pre></div></div> <p>응용 버전에서는 React를 웹뿐만 아니라 모바일 앱 개발에도 사용할 수 있는 <code class="language-plaintext highlighter-rouge">React Native</code>를 활용할 수 있습니다. 이를 통해 인터페이스의 일관성을 유지하면서도 플랫폼에 맞는 최적화된 경험을 제공할 수 있습니다.</p> <p>요약하자면, React.js는 사용하기 쉽고, 높은 확장성을 가진 프레임워크로서 개발자들에게 많은 이점을 제공합니다. 특히 컴포넌트를 사용한 재사용 가능한 코드 작성은 상당한 생산성 향상을 가져다 줍니다. 처음 시작하는 개발자들이라도 React.js의 도움을 받아 더 나은 웹 애플리케이션을 만들 수 있을 것입니다.</p>]]></content><author><name></name></author><category term="프론트엔드"/><category term="JavaScript"/><summary type="html"><![CDATA[layout: post title: JavaScript 프레임워크인 React.js 학습을 추천드립니다. date: 2021-10-01 categories: JavaScript tags: React.js —]]></summary></entry><entry><title type="html">React.js에 이어서 상태 관리 라이브러리인 Redux를 학습하는 것을 추천드립니다.</title><link href="https://sungrinhan.github.io/blog/2025/react.js%EC%97%90-%EC%9D%B4%EC%96%B4%EC%84%9C-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%B8-redux%EB%A5%BC-%ED%95%99%EC%8A%B5%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%84-%EC%B6%94%EC%B2%9C%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4/" rel="alternate" type="text/html" title="React.js에 이어서 상태 관리 라이브러리인 Redux를 학습하는 것을 추천드립니다."/><published>2025-04-21T00:00:00+00:00</published><updated>2025-04-21T00:00:00+00:00</updated><id>https://sungrinhan.github.io/blog/2025/react.js%EC%97%90-%EC%9D%B4%EC%96%B4%EC%84%9C-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%B8-redux%EB%A5%BC-%ED%95%99%EC%8A%B5%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%84-%EC%B6%94%EC%B2%9C%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2025/react.js%EC%97%90-%EC%9D%B4%EC%96%B4%EC%84%9C-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%B8-redux%EB%A5%BC-%ED%95%99%EC%8A%B5%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%84-%EC%B6%94%EC%B2%9C%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4/"><![CDATA[<hr/> <p>title: “Riding the Redux Wave After React.js” date: 2021-03-24 categories: redux, react tags: #redux, #react —</p> <h1 id="reactjs에-이어서-상태-관리-라이브러리인-redux를-학습하는-것을-추천드립니다">React.js에 이어서 상태 관리 라이브러리인 Redux를 학습하는 것을 추천드립니다.</h1> <p>리엑트를 배우고 나면 좋은 디자인 패턴을 숙지하고 그것을 코드로 옮기는데 도움이 되는 도구를 고르는 것이 중요합니다. Redux는 많은 개발자들이 애정하는 상태 관리 라이브러리입니다.</p> <h2 id="기본-개념">기본 개념</h2> <p>Redux는 JavaScript 앱을 위한 예측 가능한 상태 컨테이너입니다. Redux를 사용하면, 모든 상태 변화는 액션에 의해 발생하고, 이러한 액션은 순수한 함수인 리듀서에 의해 처리됩니다. 따라서 상태 변화는 중앙 집중화되고, ‘코드의 원인과 효과’를 쉽게 파악할 수 있습니다.</p> <p>Redux는 리엑트와 잘 어울리지만, 리엑트와 독립적으로 작동합니다. 그래서 다른 뷰 라이브러리와도 사용할 수 있습니다.</p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 액션 정의</span>
+<span class="kd">const</span> <span class="nx">ADD_TODO</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">ADD_TODO</span><span class="dl">'</span>
+<span class="kd">const</span> <span class="nx">TOGGLE_TODO</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">TOGGLE_TODO</span><span class="dl">'</span>
+
+
+<span class="c1">// 액션 생성자</span>
+<span class="kd">function</span> <span class="nf">addTodo</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="nx">ADD_TODO</span><span class="p">,</span> <span class="nx">text</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nf">toggleTodo</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="nx">TOGGLE_TODO</span><span class="p">,</span> <span class="nx">index</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 리듀서</span>
+<span class="kd">function</span> <span class="nf">todos</span><span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="p">[],</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">switch </span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nx">ADD_TODO</span><span class="p">:</span>
+      <span class="k">return</span> <span class="p">[...</span><span class="nx">state</span><span class="p">,</span> <span class="p">{</span> <span class="na">text</span><span class="p">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">text</span><span class="p">,</span> <span class="na">completed</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}]</span>
+    <span class="k">case</span> <span class="nx">TOGGLE_TODO</span><span class="p">:</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">.</span><span class="nf">map</span><span class="p">((</span><span class="nx">todo</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> 
+        <span class="nx">index</span> <span class="o">===</span> <span class="nx">action</span><span class="p">.</span><span class="nx">index</span> 
+          <span class="p">?</span> <span class="p">{...</span><span class="nx">todo</span><span class="p">,</span> <span class="na">completed</span><span class="p">:</span> <span class="o">!</span><span class="nx">todo</span><span class="p">.</span><span class="nx">completed</span><span class="p">}</span>
+          <span class="p">:</span> <span class="nx">todo</span>
+      <span class="p">)</span>
+    <span class="k">default</span><span class="p">:</span>
+      <span class="k">return</span> <span class="nx">state</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>이 예시에서 액션 객체는 사용자 또는 API 응답 등에서 생성하여 상태 업데이트를 촉발합니다.</p> <h2 id="실무에서의-활용-및-제언">실무에서의 활용 및 제언</h2> <p>Redux는 특히 대규모 애플리케이션에서 강력합니다. App 전체에서 요구하는 공통 상태를 관리하려면, Redux를 사용하는 것이 더 일관된 접근 방법을 제공합니다. 예를 들어, 여러분이 구현하는 쇼핑 카트가 어느 페이지에서든 눈에 띄게 표시돼야 한다면, Redux를 활용해 상태를 효율적으로 관리할 수 있습니다.</p> <h2 id="redux-응용">Redux 응용</h2> <p>Redux의 또 다른 장점은 다양한 미들웨어와 함께 사용할 수 있다는 것입니다. 예를 들어, <code class="language-plaintext highlighter-rouge">redux-thunk</code>는 비동기 액션의 처리를 돕습니다. 다른 미들웨어로는 <code class="language-plaintext highlighter-rouge">redux-saga</code>, <code class="language-plaintext highlighter-rouge">redux-observable</code> 등이 있습니다. 보다 고급스러운 상태 업데이트가 필요할 때 마다 이들 미들웨어를 적용해보세요.</p> <h2 id="정리">정리</h2> <p>Redux는 강력하고 유용한 상태 관리 도구입니다. 그러나 학습 곡선이 다소 가파른 편이므로, 뷰 라이브러리와 별개로 배워야 하는 점을 기억하세요. Redux를 학습하고 나면, 리엑트 앱은 더욱 강력해질 것입니다.</p>]]></content><author><name></name></author><category term="프론트엔드"/><category term="React.js에"/><summary type="html"><![CDATA[title: “Riding the Redux Wave After React.js” date: 2021-03-24 categories: redux, react tags: #redux, #react —]]></summary></entry><entry><title type="html">a post with plotly.js</title><link href="https://sungrinhan.github.io/blog/2025/plotly/" rel="alternate" type="text/html" title="a post with plotly.js"/><published>2025-03-26T14:24:00+00:00</published><updated>2025-03-26T14:24:00+00:00</updated><id>https://sungrinhan.github.io/blog/2025/plotly</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2025/plotly/"><![CDATA[<p>This is an example post with some <a href="https://plotly.com/javascript/">plotly</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
 </span><span class="sb">{
   "data": [
     {
@@ -137,16 +166,16 @@ Content 2
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
 
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="075b7a89-12db-4d33-b104-0a8e0459a00f" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="075b7a89-12db-4d33-b104-0a8e0459a00f" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
+</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="d29cf47f-6912-4c11-befc-b12e0b6bfe68" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="d29cf47f-6912-4c11-befc-b12e0b6bfe68" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
-</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="ff458759-0b82-478f-89ac-42ff341f8c86" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="ff458759-0b82-478f-89ac-42ff341f8c86" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
+</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="e63ed3c8-1e3d-4fbc-9382-bde680eb6b6b" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="e63ed3c8-1e3d-4fbc-9382-bde680eb6b6b" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
 </code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="6fa7d859-8361-4bc3-bb9c-3a65e3f004ab" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="6fa7d859-8361-4bc3-bb9c-3a65e3f004ab" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://sungrinhan.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://sungrinhan.github.io/blog/2024/typograms</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
+</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="d2c05c5b-396a-4086-8dc7-243b967d4dad" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="d2c05c5b-396a-4086-8dc7-243b967d4dad" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://sungrinhan.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://sungrinhan.github.io/blog/2024/typograms</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
 </span><span class="sb">+----+
 |    |---&gt; My first diagram!
 +----+</span>
@@ -252,448 +281,4 @@ Content 2
 \ENDPROCEDURE
 \end{algorithmic}
 \end{algorithm}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included pseudo code could look like]]></summary></entry><entry><title type="html">a post with code diff</title><link href="https://sungrinhan.github.io/blog/2024/code-diff/" rel="alternate" type="text/html" title="a post with code diff"/><published>2024-01-27T19:22:00+00:00</published><updated>2024-01-27T19:22:00+00:00</updated><id>https://sungrinhan.github.io/blog/2024/code-diff</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2024/code-diff/"><![CDATA[<p>You can display diff code by using the regular markdown syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff
-</span><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")
-</span></code></pre></div></div> <p>But this is difficult to read, specially if you have a large diff. You can use <a href="https://diff2html.xyz/">diff2html</a> to display a more readable version of the diff. For this, just use <code class="language-plaintext highlighter-rouge">diff2html</code> instead of <code class="language-plaintext highlighter-rouge">diff</code> for the code block language:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff2html
-</span><span class="sb">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
---- a/sample.js
-+++ b/sample.js
-@@ -1 +1 @@
--console.log("Hello World!")
-+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>If we use a longer example, for example <a href="https://github.com/rtfpessoa/diff2html/commit/c2c253d3e3f8b8b267f551e659f72b44ca2ac927">this commit from diff2html</a>, it will generate the following output:</p> <pre><code class="language-diff2html">From 2aaae31cc2a37bfff83430c2c914b140bee59b6a Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sun, 9 Oct 2016 16:41:54 +0100
-Subject: [PATCH 1/2] Initial template override support
-
----
- scripts/hulk.js                    |  4 ++--
- src/diff2html.js                   |  3 +--
- src/file-list-printer.js           | 11 ++++++++---
- src/hoganjs-utils.js               | 29 +++++++++++++++++------------
- src/html-printer.js                |  6 ++++++
- src/line-by-line-printer.js        |  6 +++++-
- src/side-by-side-printer.js        |  6 +++++-
- test/file-list-printer-tests.js    |  2 +-
- test/hogan-cache-tests.js          | 18 +++++++++++++++---
- test/line-by-line-tests.js         |  3 +--
- test/side-by-side-printer-tests.js |  3 +--
- 11 files changed, 62 insertions(+), 29 deletions(-)
-
-diff --git a/scripts/hulk.js b/scripts/hulk.js
-index 5a793c18..a4b1a4d5 100755
---- a/scripts/hulk.js
-+++ b/scripts/hulk.js
-@@ -173,11 +173,11 @@ function namespace(name) {
- // write a template foreach file that matches template extension
- templates = extractFiles(options.argv.remain)
-   .map(function(file) {
--    var openedFile = fs.readFileSync(file, 'utf-8');
-+    var openedFile = fs.readFileSync(file, 'utf-8').trim();
-     var name;
-     if (!openedFile) return;
-     name = namespace(path.basename(file).replace(/\..*$/, ''));
--    openedFile = removeByteOrderMark(openedFile.trim());
-+    openedFile = removeByteOrderMark(openedFile);
-     openedFile = wrap(file, name, openedFile);
-     if (!options.outputdir) return openedFile;
-     fs.writeFileSync(path.join(options.outputdir, name + '.js')
-diff --git a/src/diff2html.js b/src/diff2html.js
-index 21b0119e..64e138f5 100644
---- a/src/diff2html.js
-+++ b/src/diff2html.js
-@@ -7,7 +7,6 @@
-
- (function() {
-   var diffParser = require('./diff-parser.js').DiffParser;
--  var fileLister = require('./file-list-printer.js').FileListPrinter;
-   var htmlPrinter = require('./html-printer.js').HtmlPrinter;
-
-   function Diff2Html() {
-@@ -43,7 +42,7 @@
-
-     var fileList = '';
-     if (configOrEmpty.showFiles === true) {
--      fileList = fileLister.generateFileList(diffJson, configOrEmpty);
-+      fileList = htmlPrinter.generateFileListSummary(diffJson, configOrEmpty);
-     }
-
-     var diffOutput = '';
-diff --git a/src/file-list-printer.js b/src/file-list-printer.js
-index e408d9b2..1e0a2c61 100644
---- a/src/file-list-printer.js
-+++ b/src/file-list-printer.js
-@@ -8,11 +8,16 @@
- (function() {
-   var printerUtils = require('./printer-utils.js').PrinterUtils;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var baseTemplatesPath = 'file-summary';
-   var iconsBaseTemplatesPath = 'icon';
-
--  function FileListPrinter() {
-+  function FileListPrinter(config) {
-+    this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   FileListPrinter.prototype.generateFileList = function(diffFiles) {
-@@ -38,5 +43,5 @@
-     });
-   };
-
--  module.exports.FileListPrinter = new FileListPrinter();
-+  module.exports.FileListPrinter = FileListPrinter;
- })();
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 9949e5fa..0dda08d7 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -8,18 +8,19 @@
- (function() {
-   var fs = require('fs');
-   var path = require('path');
--
-   var hogan = require('hogan.js');
-
-   var hoganTemplates = require('./templates/diff2html-templates.js');
-
--  var templatesPath = path.resolve(__dirname, 'templates');
-+  var extraTemplates;
-
--  function HoganJsUtils() {
-+  function HoganJsUtils(configuration) {
-+    this.config = configuration || {};
-+    extraTemplates = this.config.templates || {};
-   }
-
--  HoganJsUtils.prototype.render = function(namespace, view, params, configuration) {
--    var template = this.template(namespace, view, configuration);
-+  HoganJsUtils.prototype.render = function(namespace, view, params) {
-+    var template = this.template(namespace, view);
-     if (template) {
-       return template.render(params);
-     }
-@@ -27,17 +28,16 @@
-     return null;
-   };
-
--  HoganJsUtils.prototype.template = function(namespace, view, configuration) {
--    var config = configuration || {};
-+  HoganJsUtils.prototype.template = function(namespace, view) {
-     var templateKey = this._templateKey(namespace, view);
-
--    return this._getTemplate(templateKey, config);
-+    return this._getTemplate(templateKey);
-   };
-
--  HoganJsUtils.prototype._getTemplate = function(templateKey, config) {
-+  HoganJsUtils.prototype._getTemplate = function(templateKey) {
-     var template;
-
--    if (!config.noCache) {
-+    if (!this.config.noCache) {
-       template = this._readFromCache(templateKey);
-     }
-
-@@ -53,6 +53,7 @@
-
-     try {
-       if (fs.readFileSync) {
-+        var templatesPath = path.resolve(__dirname, 'templates');
-         var templatePath = path.join(templatesPath, templateKey);
-         var templateContent = fs.readFileSync(templatePath + '.mustache', 'utf8');
-         template = hogan.compile(templateContent);
-@@ -66,12 +67,16 @@
-   };
-
-   HoganJsUtils.prototype._readFromCache = function(templateKey) {
--    return hoganTemplates[templateKey];
-+    return extraTemplates[templateKey] || hoganTemplates[templateKey];
-   };
-
-   HoganJsUtils.prototype._templateKey = function(namespace, view) {
-     return namespace + '-' + view;
-   };
-
--  module.exports.HoganJsUtils = new HoganJsUtils();
-+  HoganJsUtils.prototype.compile = function(templateStr) {
-+    return hogan.compile(templateStr);
-+  };
-+
-+  module.exports.HoganJsUtils = HoganJsUtils;
- })();
-diff --git a/src/html-printer.js b/src/html-printer.js
-index 585d5b66..13f83047 100644
---- a/src/html-printer.js
-+++ b/src/html-printer.js
-@@ -8,6 +8,7 @@
- (function() {
-   var LineByLinePrinter = require('./line-by-line-printer.js').LineByLinePrinter;
-   var SideBySidePrinter = require('./side-by-side-printer.js').SideBySidePrinter;
-+  var FileListPrinter = require('./file-list-printer.js').FileListPrinter;
-
-   function HtmlPrinter() {
-   }
-@@ -22,5 +23,10 @@
-     return sideBySidePrinter.generateSideBySideJsonHtml(diffFiles);
-   };
-
-+  HtmlPrinter.prototype.generateFileListSummary = function(diffJson, config) {
-+    var fileListPrinter = new FileListPrinter(config);
-+    return fileListPrinter.generateFileList(diffJson);
-+  };
-+
-   module.exports.HtmlPrinter = new HtmlPrinter();
- })();
-diff --git a/src/line-by-line-printer.js b/src/line-by-line-printer.js
-index b07eb53c..d230bedd 100644
---- a/src/line-by-line-printer.js
-+++ b/src/line-by-line-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'line-by-line';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -19,6 +20,9 @@
-
-   function LineByLinePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   LineByLinePrinter.prototype.makeFileDiffHtml = function(file, diffs) {
-diff --git a/src/side-by-side-printer.js b/src/side-by-side-printer.js
-index bbf1dc8d..5e3033b3 100644
---- a/src/side-by-side-printer.js
-+++ b/src/side-by-side-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'side-by-side';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -26,6 +27,9 @@
-
-   function SideBySidePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   SideBySidePrinter.prototype.makeDiffHtml = function(file, diffs) {
-diff --git a/test/file-list-printer-tests.js b/test/file-list-printer-tests.js
-index a502a46f..60ea3208 100644
---- a/test/file-list-printer-tests.js
-+++ b/test/file-list-printer-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var fileListPrinter = require('../src/file-list-printer.js').FileListPrinter;
-+var fileListPrinter = new (require('../src/file-list-printer.js').FileListPrinter)();
-
- describe('FileListPrinter', function() {
-   describe('generateFileList', function() {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 190bf6f8..3bb754ac 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var HoganJsUtils = require('../src/hoganjs-utils.js').HoganJsUtils;
-+var HoganJsUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)();
- var diffParser = require('../src/diff-parser.js').DiffParser;
-
- describe('HoganJsUtils', function() {
-@@ -21,16 +21,28 @@ describe('HoganJsUtils', function() {
-       });
-       assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should render view without cache', function() {
-       var result = HoganJsUtils.render('generic', 'empty-diff', {
-         contentClass: 'd2h-code-line',
-         diffParser: diffParser
-       }, {noCache: true});
--      assert.equal(emptyDiffHtml + '\n', result);
-+      assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should return null if template is missing', function() {
--      var result = HoganJsUtils.render('generic', 'missing-template', {}, {noCache: true});
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)({noCache: true});
-+      var result = hoganUtils.render('generic', 'missing-template', {});
-       assert.equal(null, result);
-     });
-+
-+    it('should allow templates to be overridden', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+
-+      var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-diff --git a/test/line-by-line-tests.js b/test/line-by-line-tests.js
-index 1cd92073..8869b3df 100644
---- a/test/line-by-line-tests.js
-+++ b/test/line-by-line-tests.js
-@@ -14,7 +14,7 @@ describe('LineByLinePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expected, fileHtml);
-     });
-@@ -422,7 +422,6 @@ describe('LineByLinePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                &lt;/tbody&gt;\n' +
-         '            &lt;/table&gt;\n' +
-         '        &lt;/div&gt;\n' +
-diff --git a/test/side-by-side-printer-tests.js b/test/side-by-side-printer-tests.js
-index 76625f8e..771daaa5 100644
---- a/test/side-by-side-printer-tests.js
-+++ b/test/side-by-side-printer-tests.js
-@@ -14,7 +14,7 @@ describe('SideBySidePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expectedRight, fileHtml.right);
-       assert.equal(expectedLeft, fileHtml.left);
-@@ -324,7 +324,6 @@ describe('SideBySidePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                    &lt;/tbody&gt;\n' +
-         '                &lt;/table&gt;\n' +
-         '            &lt;/div&gt;\n' +
-
-From f3cadb96677d0eb82fc2752dc3ffbf35ca9b5bdb Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sat, 15 Oct 2016 13:21:22 +0100
-Subject: [PATCH 2/2] Allow uncompiled templates
-
----
- README.md                 |  3 +++
- src/hoganjs-utils.js      |  7 +++++++
- test/hogan-cache-tests.js | 24 +++++++++++++++++++++++-
- 3 files changed, 33 insertions(+), 1 deletion(-)
-
-diff --git a/README.md b/README.md
-index 132c8a28..46909f25 100644
---- a/README.md
-+++ b/README.md
-@@ -98,6 +98,9 @@ The HTML output accepts a Javascript object with configuration. Possible options
-   - `synchronisedScroll`: scroll both panes in side-by-side mode: `true` or `false`, default is `false`
-   - `matchWordsThreshold`: similarity threshold for word matching, default is 0.25
-   - `matchingMaxComparisons`: perform at most this much comparisons for line matching a block of changes, default is `2500`
-+  - `templates`: object with previously compiled templates to replace parts of the html
-+  - `rawTemplates`: object with raw not compiled templates to replace parts of the html
-+  &gt; For more information regarding the possible templates look into [src/templates](https://github.com/rtfpessoa/diff2html/tree/master/src/templates)
-
- ## Diff2HtmlUI Helper
-
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 0dda08d7..b2e9c275 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -17,6 +17,13 @@
-   function HoganJsUtils(configuration) {
-     this.config = configuration || {};
-     extraTemplates = this.config.templates || {};
-+
-+    var rawTemplates = this.config.rawTemplates || {};
-+    for (var templateName in rawTemplates) {
-+      if (rawTemplates.hasOwnProperty(templateName)) {
-+        if (!extraTemplates[templateName]) extraTemplates[templateName] = this.compile(rawTemplates[templateName]);
-+      }
-+    }
-   }
-
-   HoganJsUtils.prototype.render = function(namespace, view, params) {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 3bb754ac..a34839c0 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -36,7 +36,7 @@ describe('HoganJsUtils', function() {
-       assert.equal(null, result);
-     });
-
--    it('should allow templates to be overridden', function() {
-+    it('should allow templates to be overridden with compiled templates', function() {
-       var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-
-       var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-@@ -44,5 +44,27 @@ describe('HoganJsUtils', function() {
-       var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-       assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-     });
-+
-+    it('should allow templates to be overridden with uncompiled templates', function() {
-+      var emptyDiffTemplate = '&lt;p&gt;&lt;/p&gt;';
-+
-+      var config = {rawTemplates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-+
-+    it('should allow templates to be overridden giving priority to compiled templates', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+      var emptyDiffTemplateUncompiled = '&lt;p&gt;Not used!&lt;/p&gt;';
-+
-+      var config = {
-+        templates: {'generic-empty-diff': emptyDiffTemplate},
-+        rawTemplates: {'generic-empty-diff': emptyDiffTemplateUncompiled}
-+      };
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is how you can display code diffs]]></summary></entry></feed>
+</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included pseudo code could look like]]></summary></entry></feed>
