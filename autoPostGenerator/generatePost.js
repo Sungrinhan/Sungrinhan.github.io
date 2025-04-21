@@ -1,0 +1,59 @@
+require('dotenv').config();
+const fs = require('fs');
+const path = require('path');
+const OpenAI = require('openai');
+
+const topics = require('./topics.json');
+
+const today = new Date().toISOString().slice(0, 10);
+const topic = topics[today] || "웹 프론트엔드 기초 정리";
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+const prompt = `
+당신은 개발 블로그 작가입니다. 아래 주제로 Jekyll 블로그용 글을 Markdown 형식으로 써주세요.
+
+제목: ${topic}
+
+요구사항:
+- 개념 설명 (500자 이상)
+- 실제 코드 예시 (코드는 \`\`\`로 감싸기)
+- 실무에서 사용할 법한 예시 및 꿀팁 
+- 응용버전 예시 
+- 요약 정리
+- jekyll post 형식에 있는 layout, title, date, categories, tags 는 따로 적지 않아도 괜찮아.
+`;
+
+async function generatePost() {
+  try {
+    const response = await openai.chat.completions.create({
+      model: "gpt-4",
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    const content = response.choices[0].message.content;
+
+    const fileName = `${today}-${topic.toLowerCase().replace(/\s+/g, '-')}.md`;
+    const filePath = path.join(__dirname, '../_posts', fileName);
+
+    const markdown = `---
+layout: post
+title: "${topic}"
+date: ${today}
+categories: 프론트엔드
+tags: ${topic.split(' ')[0]}
+---
+
+${content}
+`;
+
+    fs.writeFileSync(filePath, markdown, 'utf8');
+    console.log(`[${today}][SUCCESS] ${fileName}`);
+  } catch (error) {
+    console.error(`[${today}][ERROR] ${fileName}`);
+  }
+}
+
+generatePost();
