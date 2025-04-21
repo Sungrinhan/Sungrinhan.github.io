@@ -3,10 +3,15 @@ const fs = require('fs');
 const path = require('path');
 const OpenAI = require('openai');
 
-const filePath = path.join(__dirname, 'topics.json');
+const topicsFilePath = path.join(__dirname, 'topics.json');
+const nextTopicsFilePath = path.join(__dirname, 'nextTopics.json');
 
-const topics = fs.existsSync(filePath)
-  ? JSON.parse(fs.readFileSync(filePath, 'utf8'))
+const topics = fs.existsSync(topicsFilePath)
+  ? JSON.parse(fs.readFileSync(topicsFilePath, 'utf8'))
+  : {};
+
+const nextTopics = fs.existsSync(nextTopicsFilePath)
+  ? JSON.parse(fs.readFileSync(nextTopicsFilePath, 'utf8'))
   : {};
 
 const openai = new OpenAI({
@@ -32,23 +37,15 @@ ${previousTopics.map((t, i) => `${i + 1}. ${t}`).join('\n')}
 }
 
 async function appendTopic() {
-  const previousDates = Object.keys(topics).sort();
-  const previousTopics = previousDates.map(date => topics[date]);
-
-  const lastDate = new Date(previousDates.at(-1));
-  const nextDate = new Date(lastDate);
-  nextDate.setDate(lastDate.getDate() + 1);
-
-  const yyyy = nextDate.getFullYear();
-  const mm = String(nextDate.getMonth() + 1).padStart(2, '0');
-  const dd = String(nextDate.getDate()).padStart(2, '0');
-  const nextDateStr = `${yyyy}-${mm}-${dd}`;
-
+  const previousTopics = Object.values(topics);
   const newTopic = await getNextTopic(previousTopics);
-  topics[nextDateStr] = newTopic;
+  
+  // 현재 날짜를 키로 사용
+  const today = new Date().toISOString().slice(0, 10);
+  nextTopics[today] = newTopic;
 
-  fs.writeFileSync(filePath, JSON.stringify(topics, null, 2), 'utf8');
-  console.log(`[${nextDateStr}][SUCCESS] ${newTopic}`);
+  fs.writeFileSync(nextTopicsFilePath, JSON.stringify(nextTopics, null, 2), 'utf8');
+  console.log(`[${today}][SUCCESS] ${newTopic}`);
 }
 
 appendTopic();

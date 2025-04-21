@@ -21,7 +21,7 @@ function gitCommitAndPush() {
 }
 
 async function main() {
-  run("appendNextTopic.js");
+  run("generateTopic.js");
   run("generatePost.js");
   gitCommitAndPush();
 }
