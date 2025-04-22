@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "Redux Saga를 이용한 비동기 처리와 효율적인 상태 관리
-
-블로그 제목: "Redux Saga: React.js에서의 비동기 처리와 상태 관리를 향상시키는 방법""
+title: "Redux Saga를 이용한 비동기 처리와 효율적인 상태 관리 :React.js에서의 비동기 처리와 상태 관리를 향상시키는 방법"
 date: 2025-04-22 15:05:11
 categories: 프론트엔드
 tags: Redux

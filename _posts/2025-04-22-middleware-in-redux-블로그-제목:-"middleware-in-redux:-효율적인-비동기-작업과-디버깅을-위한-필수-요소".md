@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "Middleware in Redux 
-
-블로그 제목: "Middleware in Redux: 효율적인 비동기 작업과 디버깅을 위한 필수 요소""
+title: "Middleware in Redux : 효율적인 비동기 작업과 디버깅을 위한 필수 요소"
 date: 2025-04-22 15:09:22
 categories: 프론트엔드
 tags: Middleware
----
-
 ---
 
 **Middleware in Redux: 효율적인 비동기 작업과 디버깅을 위한 필수 요소**
