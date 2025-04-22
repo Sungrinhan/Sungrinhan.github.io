@@ -72,26 +72,26 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-",
+            },{id: "post-middleware-in-redux-효율적인-비동기-작업과-디버깅을-위한-필수-요소",
         
-          title: "",
+          title: "Middleware in Redux : 효율적인 비동기 작업과 디버깅을 위한 필수 요소",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/2025-04-22-%EC%A3%BC%EC%A0%9C-redux-saga%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%B2%98%EB%A6%AC%EC%99%80-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-redux-saga-react.js%EC%97%90%EC%84%9C%EC%9D%98-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%B2%98%EB%A6%AC%EC%99%80-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%EB%A5%BC-%ED%96%A5%EC%83%81%EC%8B%9C%ED%82%A4%EB%8A%94-%EB%B0%A9%EB%B2%95/";
+            window.location.href = "/blog/2025/middleware-in-redux-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-middleware-in-redux-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-%EB%94%94%EB%B2%84%EA%B9%85%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-%EC%9A%94%EC%86%8C/";
           
         },
-      },{id: "post-",
+      },{id: "post-redux-saga를-이용한-비동기-처리와-효율적인-상태-관리-react-js에서의-비동기-처리와-상태-관리를-향상시키는-방법",
         
-          title: "",
+          title: "Redux Saga를 이용한 비동기 처리와 효율적인 상태 관리 :React.js에서의 비동기 처리와 상태 관리를...",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/2025-04-22-middleware-in-redux-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-middleware-in-redux-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-%EB%94%94%EB%B2%84%EA%B9%85%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-%EC%9A%94%EC%86%8C/";
+            window.location.href = "/blog/2025/%EC%A3%BC%EC%A0%9C-redux-saga%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%B2%98%EB%A6%AC%EC%99%80-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-redux-saga-react.js%EC%97%90%EC%84%9C%EC%9D%98-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%B2%98%EB%A6%AC%EC%99%80-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%EB%A5%BC-%ED%96%A5%EC%83%81%EC%8B%9C%ED%82%A4%EB%8A%94-%EB%B0%A9%EB%B2%95/";
           
         },
       },{id: "post-react-js에-이어서-상태-관리-라이브러리인-redux를-학습하는-것을-추천드립니다",
