@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h1 id="redux-saga-reactjs에서의-비동기-처리와-상태-관리를-향상시키는-방법">Redux Saga: React.js에서의 비동기 처리와 상태 관리를 향상시키는 방법</h1> <h2 id="redux-saga-소개">Redux Saga 소개</h2> <p>Redux Saga는 JavaScript 애플리케이션에서 부작용 (비동기 요청과 같이 결과가 애플리케이션의 상태에 의존하지 않는 함수)를 쉽게 관리할 수있는 라이브러리이다. 이것은 애플리케이션 사이드 이펙트, 즉 데이터 요청, 가상 액션에 응답, 브라우저 캐시 액세스 등을보다 쉽고 가독성이 좋게 만드는 데 실제로 도움이 된다.</p> <h2 id="redux-saga의-작동-방식">Redux Saga의 작동 방식</h2> <p>Redux Saga는 ES6 기능인 제너레이터를 사용하여 비동기일 수 있는 동작을 조정한다. 이 잘 설계된 조합은 비동기 코드의 읽기 쉽고 테스트하기 쉬운 작성을 가능하게 한다. 제너레이터는 기본적으로 함수가 중간에서 멈추고 다시 시작할 수있는 기능을 제공하므로, 코드의 비실질적인 부분 (비동기 요청들)을 순차적으로 겉보기 분명하게 구성할 수 있다.</p> <p>기본적으로 Redux Saga는 애플리케이션에서 발생하는 각 Redux 액션에 대응하는 Saga를 등록하고, 해당 액션을 감지하면 정의한 작업을 실행한다.</p> <h2 id="redux-saga-사용-예시">Redux Saga 사용 예시</h2> <p>Redux Saga는 애플리케이션 상태에 대한 사이드 이펙트를 관리하기 위해 사용된다. 비동기 작업을 처리하는 가장 일반적인 시나리오 중 하나는 API 호출을 보내는 것이다.</p> <p>기본적인 Redux Saga 사이드 이펙트로서 API 호출을 처리하는 코드 예시를 살펴보자.</p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">call</span><span class="p">,</span> <span class="nx">put</span><span class="p">,</span> <span class="nx">takeEvery</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">redux-saga/effects</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Api</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">...</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// worker Saga: USER_FETCH_REQUESTED 액션에 응답하여 비동기 요청을 수행함</span>
+<span class="kd">function</span><span class="o">*</span> <span class="nf">fetchUser</span><span class="p">(</span><span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">yield</span> <span class="nf">call</span><span class="p">(</span><span class="nx">Api</span><span class="p">.</span><span class="nx">fetchUser</span><span class="p">,</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">userId</span><span class="p">);</span>
+    <span class="k">yield</span> <span class="nf">put</span><span class="p">({</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">USER_FETCH_SUCCEEDED</span><span class="dl">"</span><span class="p">,</span> <span class="na">user</span><span class="p">:</span> <span class="nx">user</span> <span class="p">});</span>
+  <span class="p">}</span> <span class="k">catch </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">yield</span> <span class="nf">put</span><span class="p">({</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">USER_FETCH_FAILED</span><span class="dl">"</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">message</span> <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="o">*</span> <span class="nf">mySaga</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">yield</span> <span class="nf">takeEvery</span><span class="p">(</span><span class="dl">"</span><span class="s2">USER_FETCH_REQUESTED</span><span class="dl">"</span><span class="p">,</span> <span class="nx">fetchUser</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">mySaga</span><span class="p">;</span>
+</code></pre></div></div> <p>위 예제에서 <code class="language-plaintext highlighter-rouge">fetchUser</code>라는 worker Saga는 <code class="language-plaintext highlighter-rouge">USER_FETCH_REQUESTED</code> 액션을 감지하면 실행된다. 이 saga는 Api 모듈의 <code class="language-plaintext highlighter-rouge">fetchUser</code> 함수에 <code class="language-plaintext highlighter-rouge">userId</code>를 전달하여 API 호출을 수행한다. API 요청이 성공하면 결과를 payload로 포함하는 <code class="language-plaintext highlighter-rouge">USER_FETCH_SUCCEEDED</code> 액션을 dispatch한다. 만약 API 요청이 실패하면, 에러 메시지를 payload로 포함하는 <code class="language-plaintext highlighter-rouge">USER_FETCH_FAILED</code> 액션을 dispatch한다.</p> <h2 id="redux-saga-활용-팁">Redux Saga 활용 팁</h2> <p>Redux Saga에서는 지연 (<code class="language-plaintext highlighter-rouge">delay</code>), 동시성 (병렬 작업 실행), 데버틀링 및 쓰로틀링, 비동기 호출 중단 (예: API 요청 취소)과 같은 고급 사이드 이펙트 관리 기능도 제공한다. 이런 기능들은 애플리케이션의 복잡성을 크게 줄여주며, 신뢰성과 사용성을 향상시키는 데 도움이 된다.</p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">all</span><span class="p">,</span> <span class="nx">call</span><span class="p">,</span> <span class="nx">put</span><span class="p">,</span> <span class="nx">takeEvery</span><span class="p">,</span> <span class="nx">delay</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">redux-saga/effects</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">Api</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">...</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// worker saga</span>
+<span class="kd">function</span><span class="o">*</span> <span class="nf">fetchUser</span><span class="p">(</span><span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="k">yield</span> <span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+        <span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">yield</span> <span class="nf">call</span><span class="p">(</span><span class="nx">Api</span><span class="p">.</span><span class="nx">fetchUser</span><span class="p">,</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">userId</span><span class="p">);</span>
+        <span class="k">yield</span> <span class="nf">put</span><span class="p">({</span><span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">USER_FETCH_SUCCEEDED</span><span class="dl">"</span><span class="p">,</span> <span class="na">user</span><span class="p">:</span> <span class="nx">user</span><span class="p">});</span>
+    <span class="p">}</span> <span class="k">catch </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">yield</span> <span class="nf">put</span><span class="p">({</span><span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">USER_FETCH_FAILED</span><span class="dl">"</span><span class="p">,</span> <span class="na">message</span><span class="p">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// root saga</span>
+<span class="kd">function</span><span class="o">*</span> <span class="nf">mySaga</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">yield</span> <span class="nf">all</span><span class="p">([</span>
+        <span class="nf">takeEvery</span><span class="p">(</span><span class="dl">"</span><span class="s2">USER_FETCH_REQUESTED</span><span class="dl">"</span><span class="p">,</span> <span class="nx">fetchUser</span><span class="p">),</span>
+        <span class="c1">// 다른 worker sagas를 등록할 수 있다</span>
+    <span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">mySaga</span><span class="p">;</span>
+</code></pre></div></div> <p>위 예제는 <code class="language-plaintext highlighter-rouge">delay</code>의 사용방법을 보여주는 고급 Redux Saga 코드의 한가지 예시이다.</p> </body></html>
