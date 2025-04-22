@@ -25,7 +25,9 @@ async function getNextTopic(previousTopics) {
 
 ${previousTopics.map((t, i) => `${i + 1}. ${t}`).join('\n')}
 
-이어서 학습하면 좋은 주제를 1개만, 간결하게 추천해주세요.
+이어서 학습하면 좋은 주제를 1개만, 추천해주세요.
+이전 내용에 대해 심화학습도 괜찮아. 깊게 파고들 수 있는 주제 + 심화학습도 같이 추천해;
+블로그 제목은 주제를 포함해서 작성해. 블로그 제목으로 쓸거니까.
 `;
 
   const res = await openai.chat.completions.create({

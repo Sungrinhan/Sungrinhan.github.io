@@ -31,8 +31,8 @@ const prompt = `
 - 실제 코드 예시 (코드는 \`\`\`로 감싸기)
 - 실무에서 사용할 법한 예시 및 꿀팁 
 - 응용버전 예시 
-- 요약 정리
-- jekyll post 형식에 있는 layout, title, date, categories, tags 는 따로 적지 않아도 괜찮아.
+- 완전 자세하게 적어줘. 내용에 대한 질문을 2번정도 더한것처럼 설명을 자세히, 예시도 자세히 해.
+- 제목은 내가 알아서 할테니 그냥 컨텐트 내용만 적어. 
 `;
 
 async function generatePost() {

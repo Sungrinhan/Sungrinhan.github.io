@@ -6,10 +6,6 @@ categories: 프론트엔드
 tags: CSS
 ---
 
----
-layout: post
-title: CSS Flexbox 기초
----
 
 CSS **Flexbox**는 웹페이지 내의 객체들 간의 간격과 위치를 보다 유연하게 조정할 수 있는 웹 디자인 기법인 Responsive Design의 일환입니다. **Flexbox**는 'Flexible Box'의 줄임말로, 유연성을 바탕으로 웹페이지의 레이아웃을 쉽게 구성하는 데 사용됩니다. 이 포스트에서는 Flexbox의 기본 개념을 배우고 실제 코드 예시와 함께 실무에서 어떻게 활용할 수 있는지 살펴보겠습니다.
 

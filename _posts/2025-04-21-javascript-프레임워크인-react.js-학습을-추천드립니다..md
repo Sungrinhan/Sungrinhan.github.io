@@ -6,14 +6,6 @@ categories: 프론트엔드
 tags: JavaScript
 ---
 
----
-layout: post
-title: JavaScript 프레임워크인 React.js 학습을 추천드립니다.
-date: 2021-10-01
-categories: JavaScript
-tags: React.js
----
-
 React.js는 Facebook이 개발하고 관리하는 JavaScript 라이브러리로 User Interface (UI)를 만드는 데 집중되어 있습니다. React.js는 효율적으로 코딩을 할 수 있도록 도우며, 개발자들이 웹 애플리케이션을 좀더 쉽게 만들 수 있도록 해주는 특이한 특징들을 많이 가지고 있습니다.
 
 React 개발의 핵심 개념 중 하나는 컴포넌트입니다. 컴포넌트는 프로그래밍에서 코드를 재사용 가능하도록 만든 개별적인 코드 블록을 말합니다. 이러한 컴포넌트 개념 덕분에, 한 번 작성해 놓은 컴포넌트를 다른 프로젝트에도 재사용하거나, 필요에 따라 조합할 수 있습니다.
