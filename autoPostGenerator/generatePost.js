@@ -14,8 +14,10 @@ const nextTopics = fs.existsSync(nextTopicsFilePath)
   ? JSON.parse(fs.readFileSync(nextTopicsFilePath, 'utf8'))
   : {};
 
-const today = new Date().toISOString().slice(0, 10);
-const topic = nextTopics[today] || "웹 프론트엔드 기초 정리";
+const now = new Date();
+const dateTimeStr = now.toISOString().slice(0, 19).replace('T', ' ');
+const today = now.toISOString().slice(0, 10);
+const topic = nextTopics[dateTimeStr] || "웹 프론트엔드 기초 정리";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -50,7 +52,7 @@ async function generatePost() {
     const markdown = `---
 layout: post
 title: "${topic}"
-date: ${today}
+date: ${dateTimeStr}
 categories: 프론트엔드
 tags: ${topic.split(' ')[0]}
 ---
@@ -61,15 +63,15 @@ ${content}
     fs.writeFileSync(filePath, markdown, 'utf8');
     
     // 작성된 토픽을 topics.json으로 이동
-    topics[today] = topic;
-    delete nextTopics[today];
+    topics[dateTimeStr] = topic;
+    delete nextTopics[dateTimeStr];
     
     fs.writeFileSync(topicsFilePath, JSON.stringify(topics, null, 2), 'utf8');
     fs.writeFileSync(nextTopicsFilePath, JSON.stringify(nextTopics, null, 2), 'utf8');
     
-    console.log(`[${today}][SUCCESS] ${fileName}`);
+    console.log(`[${dateTimeStr}][SUCCESS] ${fileName}`);
   } catch (error) {
-    console.error(`[${today}][ERROR] ${error.message}`);
+    console.error(`[${dateTimeStr}][ERROR] ${error.message}`);
   }
 }
 

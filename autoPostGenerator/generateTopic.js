@@ -42,12 +42,13 @@ async function appendTopic() {
   const previousTopics = Object.values(topics);
   const newTopic = await getNextTopic(previousTopics);
   
-  // 현재 날짜를 키로 사용
-  const today = new Date().toISOString().slice(0, 10);
-  nextTopics[today] = newTopic;
+  // 현재 날짜와 시간을 키로 사용
+  const now = new Date();
+  const dateTimeStr = now.toISOString().slice(0, 19).replace('T', ' ');
+  nextTopics[dateTimeStr] = newTopic;
 
   fs.writeFileSync(nextTopicsFilePath, JSON.stringify(nextTopics, null, 2), 'utf8');
-  console.log(`[${today}][SUCCESS] ${newTopic}`);
+  console.log(`[${dateTimeStr}][SUCCESS] ${newTopic}`);
 }
 
 appendTopic();
