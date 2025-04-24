@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-웹-프론트엔드-기초-정리",
+            },{id: "post-redux-toolkit을-활용한-효율적인-상태관리-블로그-제목-redux-toolkit-활용-쉽고-빠른-상태-관리를-위한-해법",
+        
+          title: "Redux Toolkit을 활용한 효율적인 상태관리 블로그 제목: Redux Toolkit 활용: 쉽고 빠른 상태...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/redux-toolkit%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-redux-toolkit-%ED%99%9C%EC%9A%A9-%EC%89%BD%EA%B3%A0-%EB%B9%A0%EB%A5%B8-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%95%B4%EB%B2%95/";
+          
+        },
+      },{id: "post-웹-프론트엔드-기초-정리",
         
           title: "웹 프론트엔드 기초 정리",
         
