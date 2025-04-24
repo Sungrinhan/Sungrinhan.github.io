@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-middleware-in-redux-효율적인-비동기-작업과-디버깅을-위한-필수-요소",
+            },{id: "post-웹-프론트엔드-기초-정리",
+        
+          title: "웹 프론트엔드 기초 정리",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B8%B0%EC%B4%88-%EC%A0%95%EB%A6%AC/";
+          
+        },
+      },{id: "post-middleware-in-redux-효율적인-비동기-작업과-디버깅을-위한-필수-요소",
         
           title: "Middleware in Redux : 효율적인 비동기 작업과 디버깅을 위한 필수 요소",
         

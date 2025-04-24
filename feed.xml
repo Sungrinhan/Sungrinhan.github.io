@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://sungrinhan.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://sungrinhan.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-04-22T15:38:39+00:00</updated><id>https://sungrinhan.github.io/feed.xml</id><title type="html">성린s 메모장</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Middleware in Redux : 효율적인 비동기 작업과 디버깅을 위한 필수 요소</title><link href="https://sungrinhan.github.io/blog/2025/middleware-in-redux-middleware-in-redux-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-%EB%94%94%EB%B2%84%EA%B9%85%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-%EC%9A%94%EC%86%8C/" rel="alternate" type="text/html" title="Middleware in Redux : 효율적인 비동기 작업과 디버깅을 위한 필수 요소"/><published>2025-04-22T15:09:22+00:00</published><updated>2025-04-22T15:09:22+00:00</updated><id>https://sungrinhan.github.io/blog/2025/middleware-in-redux-middleware-in-redux-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-%EB%94%94%EB%B2%84%EA%B9%85%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-%EC%9A%94%EC%86%8C</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2025/middleware-in-redux-middleware-in-redux-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-%EB%94%94%EB%B2%84%EA%B9%85%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-%EC%9A%94%EC%86%8C/"><![CDATA[<p><strong>Middleware in Redux: 효율적인 비동기 작업과 디버깅을 위한 필수 요소</strong></p> <p>Redux에서의 middleware는 액션을 dispatch 하여 리듀서에서 이를 처리하기 전의 중간 공간을 의미합니다. 즉, 액션이 특정 작업을 처리하는 도중에 원하는 동작을 삽입할 수 있게 해줍니다. 이는 비동기 작업을 처리하거나, 특정 조건에 따라 액션을 무시하거나, 콘솔에 로그를 출력하거나, 서버 API 호출 등과 같은 사용자 정의 작업을 적용하는 데 특히 유용합니다.</p> <p>Redux middleware를 구현하려면, 다음과 같은 패턴의 함수를 작성해야 합니다.</p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">myMiddleware</span> <span class="o">=</span> <span class="nx">store</span> <span class="o">=&gt;</span> <span class="nx">next</span> <span class="o">=&gt;</span> <span class="nx">action</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://sungrinhan.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://sungrinhan.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-04-24T13:31:37+00:00</updated><id>https://sungrinhan.github.io/feed.xml</id><title type="html">성린s 메모장</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">웹 프론트엔드 기초 정리</title><link href="https://sungrinhan.github.io/blog/2025/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B8%B0%EC%B4%88-%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="웹 프론트엔드 기초 정리"/><published>2025-04-24T13:29:50+00:00</published><updated>2025-04-24T13:29:50+00:00</updated><id>https://sungrinhan.github.io/blog/2025/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B8%B0%EC%B4%88-%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2025/%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B8%B0%EC%B4%88-%EC%A0%95%EB%A6%AC/"><![CDATA[<hr/> <h1 id="웹-프론트엔드-기초-정리">웹 프론트엔드 기초 정리</h1> <p>웹 프론트엔드는 사용자와 직접적으로 만나고 상호작용하는 웹사이트의 중요한 부분입니다. 이를 구성하는 주요 기술로는 HTML, CSS, 그리고 JavaScript가 있습니다.</p> <p>HTML (HyperText Markup Language)은 웹페이지의 기본적인 구조를 작성하는 언어입니다. 웹페이지의 제목, 단락, 표, 이미지 등의 요소를 정의하고 구조화합니다. 사용하는 기본 태그 형태로는 <code class="language-plaintext highlighter-rouge">&lt;tag attribute="value"&gt; 내용 &lt;/tag&gt;</code>와 같습니다.</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>웹 페이지 제목<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>첫 번째 제목<span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;p&gt;</span>첫 번째 단락<span class="nt">&lt;/p&gt;</span> 
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div> <p>CSS (Cascading Style Sheets)는 HTML로 작성한 웹페이지의 디자인을 꾸미는 언어입니다. 기본적인 스타일 지정 형태로는 <code class="language-plaintext highlighter-rouge">selector {property: value;}</code>와 같습니다.</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">lightblue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">navy</span><span class="p">;</span>
+    <span class="nl">margin-left</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>JavaScript는 웹페이지에 동적인 요소를 추가하는 언어입니다. 사용자와 상호작용하거나 웹페이지가 Live 업데이트 되게 하거나 다양한 웹 기능을 구현할 때 사용됩니다.</p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">changeBackgroundColor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">green</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nf">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">배경색이 변경되었습니다.</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>실무에서는 이 외에도 프레임워크와 라이브러리를 활용하여 더욱 효과적인 웹 개발이 이루어집니다. 자주 사용되는 예로는 React, Vue, Angular 등이 있습니다.</p> <p>특히, 추천하고 싶은 웹 프론트엔드 꿀팁은 “DevTools를 적극 활용하라”입니다. 대부분의 웹 브라우저는 개발자 도구(DevTools)를 지원하며, 이를 활용하면 HTML, CSS, JavaScript 요소를 실시간으로 확인하고 조정하면서 진행할 수 있습니다.</p> <hr/> <p>응용 버전 예시로는, HTML/CSS/JavaScript를 활용한 간단한 디지털 시계 기능을 소개하겠습니다.</p> <p>먼저 HTML 파일에서는 시간을 표시할 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> 태그를 준비합니다.</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"clock"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div></div> <p>CSS 파일에서는 디지털 시계의 디자인을 정의합니다.</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#clock</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">60px</span><span class="p">;</span>
+    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">20%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>그리고 JavaScript에서는 현재 시간을 가져와서 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> 태그 안에 표시하는 기능을 구현합니다.</p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">clock</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">hours</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nf">getHours</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">minutes</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nf">getMinutes</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">seconds</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nf">getSeconds</span><span class="p">();</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">clock</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">hours</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">:</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">minutes</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">:</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">seconds</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">setInterval</span><span class="p">(</span><span class="nx">clock</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// 1초마다 새로고침</span>
+</code></pre></div></div> <p>웹 페이지를 열면, JavaScript가 현재 시간을 가져와서 HTML의 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> 태그 안에 출력하며, CSS가 이를 디자인합니다. 이런 식으로 HTML, CSS, JavaScript가 서로 상호작용하며 웹 페이지를 구성하는 것이 바로 프론트엔드의 중심적인 역할입니다.</p> <p>웹 프론트엔드 개발은 많은 학습과 실습을 필요로 하지만, 그만큼 매력적이고 보람찬 분야입니다. 기초부터 차근차근 배워나가며 훌륭한 프론트엔드 개발자가 되길 바랍니다.</p>]]></content><author><name></name></author><category term="프론트엔드"/><category term="웹"/><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Middleware in Redux : 효율적인 비동기 작업과 디버깅을 위한 필수 요소</title><link href="https://sungrinhan.github.io/blog/2025/middleware-in-redux-middleware-in-redux-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-%EB%94%94%EB%B2%84%EA%B9%85%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-%EC%9A%94%EC%86%8C/" rel="alternate" type="text/html" title="Middleware in Redux : 효율적인 비동기 작업과 디버깅을 위한 필수 요소"/><published>2025-04-22T15:09:22+00:00</published><updated>2025-04-22T15:09:22+00:00</updated><id>https://sungrinhan.github.io/blog/2025/middleware-in-redux-middleware-in-redux-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-%EB%94%94%EB%B2%84%EA%B9%85%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-%EC%9A%94%EC%86%8C</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2025/middleware-in-redux-middleware-in-redux-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85%EA%B3%BC-%EB%94%94%EB%B2%84%EA%B9%85%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%95%84%EC%88%98-%EC%9A%94%EC%86%8C/"><![CDATA[<p><strong>Middleware in Redux: 효율적인 비동기 작업과 디버깅을 위한 필수 요소</strong></p> <p>Redux에서의 middleware는 액션을 dispatch 하여 리듀서에서 이를 처리하기 전의 중간 공간을 의미합니다. 즉, 액션이 특정 작업을 처리하는 도중에 원하는 동작을 삽입할 수 있게 해줍니다. 이는 비동기 작업을 처리하거나, 특정 조건에 따라 액션을 무시하거나, 콘솔에 로그를 출력하거나, 서버 API 호출 등과 같은 사용자 정의 작업을 적용하는 데 특히 유용합니다.</p> <p>Redux middleware를 구현하려면, 다음과 같은 패턴의 함수를 작성해야 합니다.</p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">myMiddleware</span> <span class="o">=</span> <span class="nx">store</span> <span class="o">=&gt;</span> <span class="nx">next</span> <span class="o">=&gt;</span> <span class="nx">action</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="c1">// 여기서 미들웨어 로직을 작성할 수 있습니다.</span>
     <span class="k">return</span> <span class="nf">next</span><span class="p">(</span><span class="nx">action</span><span class="p">);</span>
 <span class="p">};</span>
@@ -256,67 +292,13 @@ Content 2
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
 
 <span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="08d4fb56-3c28-4d5e-922d-3ac151d7fa14" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="08d4fb56-3c28-4d5e-922d-3ac151d7fa14" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
+</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="615d91b7-ec44-4256-97be-1715daad47af" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="615d91b7-ec44-4256-97be-1715daad47af" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
 </code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
-</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="1517782c-256a-406b-88ff-101417a7bd4e" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="1517782c-256a-406b-88ff-101417a7bd4e" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
+</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="00d0fc45-8256-4f25-b978-ee8c84c8ec47" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="00d0fc45-8256-4f25-b978-ee8c84c8ec47" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
   <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
 </code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="f13be309-0786-4525-8acb-6bbfd01bd9c3" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="f13be309-0786-4525-8acb-6bbfd01bd9c3" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://sungrinhan.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://sungrinhan.github.io/blog/2024/typograms</id><content type="html" xml:base="https://sungrinhan.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
-</span><span class="sb">+----+
-|    |---&gt; My first diagram!
-+----+</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-typograms">+----+
-|    |---&gt; My first diagram!
-+----+
-</code></pre> <p>Another example:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
-</span><span class="sb">.------------------------.
-|.----------------------.|
-||"https://example.com" ||
-|'----------------------'|
-| ______________________ |
-||                      ||
-||   Welcome!           ||
-||                      ||
-||                      ||
-||  .----------------.  ||
-||  | username       |  ||
-||  '----------------'  ||
-||  .----------------.  ||
-||  |"*******"       |  ||
-||  '----------------'  ||
-||                      ||
-||  .----------------.  ||
-||  |   "Sign-up"    |  ||
-||  '----------------'  ||
-||                      ||
-|+----------------------+|
-.------------------------.</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>which generates:</p> <pre><code class="language-typograms">.------------------------.
-|.----------------------.|
-||"https://example.com" ||
-|'----------------------'|
-| ______________________ |
-||                      ||
-||   Welcome!           ||
-||                      ||
-||                      ||
-||  .----------------.  ||
-||  | username       |  ||
-||  '----------------'  ||
-||  .----------------.  ||
-||  |"*******"       |  ||
-||  '----------------'  ||
-||                      ||
-||  .----------------.  ||
-||  |   "Sign-up"    |  ||
-||  '----------------'  ||
-||                      ||
-|+----------------------+|
-.------------------------.
-</code></pre> <p>For more examples, check out the <a href="https://google.github.io/typograms/#examples">typograms documentation</a>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included typograms code could look like]]></summary></entry></feed>
+</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="c355b9d8-8d29-43a4-be68-c6e099a70091" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="c355b9d8-8d29-43a4-be68-c6e099a70091" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry></feed>
