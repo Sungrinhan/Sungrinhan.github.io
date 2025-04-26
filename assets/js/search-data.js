@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-redux-toolkit을-활용한-효율적인-상태관리-블로그-제목-redux-toolkit-활용-쉽고-빠른-상태-관리를-위한-해법",
+            },{id: "post-프론트엔드-테스트-기법과-jest-블로그-제목-react에서-jest를-활용한-프론트엔드-테스트-기법-마스터하기",
+        
+          title: "프론트엔드 테스트 기법과 Jest 블로그 제목: React에서 Jest를 활용한 프론트엔드 테스트 기법 마스터하기...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B8%B0%EB%B2%95%EA%B3%BC-jest-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-react%EC%97%90%EC%84%9C-jest%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B8%B0%EB%B2%95-%EB%A7%88%EC%8A%A4%ED%84%B0%ED%95%98%EA%B8%B0/";
+          
+        },
+      },{id: "post-redux-toolkit을-활용한-효율적인-상태관리-블로그-제목-redux-toolkit-활용-쉽고-빠른-상태-관리를-위한-해법",
         
           title: "Redux Toolkit을 활용한 효율적인 상태관리 블로그 제목: Redux Toolkit 활용: 쉽고 빠른 상태...",
         
