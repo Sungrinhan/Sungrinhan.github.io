@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-프론트엔드-테스트-기법과-jest-블로그-제목-react에서-jest를-활용한-프론트엔드-테스트-기법-마스터하기",
+            },{id: "post-react-router를-이용한-싱글-페이지-어플리케이션-구현-블로그-제목-react-router-활용-가이드-싱글-페이지-어플리케이션-구현하기",
+        
+          title: "React-Router를 이용한 싱글 페이지 어플리케이션 구현 블로그 제목: React-Router 활용 가이드: 싱글 페이지...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/react-router%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%8B%B1%EA%B8%80-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B5%AC%ED%98%84-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-react-router-%ED%99%9C%EC%9A%A9-%EA%B0%80%EC%9D%B4%EB%93%9C-%EC%8B%B1%EA%B8%80-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0/";
+          
+        },
+      },{id: "post-프론트엔드-테스트-기법과-jest-블로그-제목-react에서-jest를-활용한-프론트엔드-테스트-기법-마스터하기",
         
           title: "프론트엔드 테스트 기법과 Jest 블로그 제목: React에서 Jest를 활용한 프론트엔드 테스트 기법 마스터하기...",
         
