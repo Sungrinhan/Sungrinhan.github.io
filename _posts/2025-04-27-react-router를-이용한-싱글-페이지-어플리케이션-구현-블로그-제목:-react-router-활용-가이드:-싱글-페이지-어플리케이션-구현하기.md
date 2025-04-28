@@ -5,7 +5,7 @@ title: "React-Router를 이용한 싱글 페이지 어플리케이션 구현
 블로그 제목: React-Router 활용 가이드: 싱글 페이지 어플리케이션 구현하기"
 date: 2025-04-27 10:46:25
 categories: 프론트엔드
-tags: React-Router를
+tags: React-Router
 ---
 
 # React-Router 활용 가이드: 싱글 페이지 어플리케이션 구현하기
