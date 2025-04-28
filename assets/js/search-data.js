@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-react-router를-이용한-싱글-페이지-어플리케이션-구현-블로그-제목-react-router-활용-가이드-싱글-페이지-어플리케이션-구현하기",
+            },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/2025-04-28-%EC%A3%BC%EC%A0%9C-next.js%EC%97%90%EC%84%9C%EC%9D%98-server-side-rendering-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-next.js%EC%97%90%EC%84%9C%EC%9D%98-server-side-rendering-%ED%8D%BC%ED%8F%AC%EB%A8%BC%EC%8A%A4-%ED%96%A5%EC%83%81%EA%B3%BC-seo-%EC%B5%9C%EC%A0%81%ED%99%94%EB%A1%9C-%EB%A6%AC%EB%8D%94%ED%95%9C-%EA%B1%B8%EC%9D%8C-%EB%8D%94-%EB%82%98%EC%95%84%EA%B0%80%EA%B8%B0/";
+          
+        },
+      },{id: "post-react-router를-이용한-싱글-페이지-어플리케이션-구현-블로그-제목-react-router-활용-가이드-싱글-페이지-어플리케이션-구현하기",
         
           title: "React-Router를 이용한 싱글 페이지 어플리케이션 구현 블로그 제목: React-Router 활용 가이드: 싱글 페이지...",
         
