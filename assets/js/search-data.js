@@ -94,6 +94,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/2025-04-28-%EC%A3%BC%EC%A0%9C-next.js%EC%97%90%EC%84%9C%EC%9D%98-server-side-rendering-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-next.js%EC%97%90%EC%84%9C%EC%9D%98-server-side-rendering-%ED%8D%BC%ED%8F%AC%EB%A8%BC%EC%8A%A4-%ED%96%A5%EC%83%81%EA%B3%BC-seo-%EC%B5%9C%EC%A0%81%ED%99%94%EB%A1%9C-%EB%A6%AC%EB%8D%94%ED%95%9C-%EA%B1%B8%EC%9D%8C-%EB%8D%94-%EB%82%98%EC%95%84%EA%B0%80%EA%B8%B0/";
           
         },
+      },{id: "post-graphql과-apollo를-활용한-효율적인-데이터-관리-블로그-제목-react에서-graphql과-apollo를-활용한-첨단-데이터-관리-방법",
+        
+          title: "GraphQL과 Apollo를 활용한 효율적인 데이터 관리 블로그 제목: React에서 GraphQL과 Apollo를 활용한 첨단...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/graphql%EA%B3%BC-apollo%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-react%EC%97%90%EC%84%9C-graphql%EA%B3%BC-apollo%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%B2%A8%EB%8B%A8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC-%EB%B0%A9%EB%B2%95/";
+          
+        },
       },{id: "post-react에서-typescript를-활용한-강력한-타입-관리-블로그-제목-react에서-typescript로-향상된-타입안정성과-코드-퀄리티-realize하기",
         
           title: "React에서 TypeScript를 활용한 강력한 타입 관리 블로그 제목: React에서 TypeScript로 향상된 타입안정성과 코드...",
