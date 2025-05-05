@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "GraphQL과 Apollo를 활용한 효율적인 데이터 관리
-
-블로그 제목: React에서 GraphQL과 Apollo를 활용한 첨단 데이터 관리 방법"
+title: "React에서 GraphQL과 Apollo를 활용한 첨단 데이터 관리 방법"
 date: 2025-05-03 10:24:42
 categories: 프론트엔드
-tags: GraphQL과
+tags: graphql,apollo
 ---
 
 # React에서 GraphQL과 Apollo를 활용한 첨단 데이터 관리 방법

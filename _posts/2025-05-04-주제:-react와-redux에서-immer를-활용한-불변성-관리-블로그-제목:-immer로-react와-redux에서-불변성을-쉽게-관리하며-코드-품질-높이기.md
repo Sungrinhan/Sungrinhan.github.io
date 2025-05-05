@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "주제: React와 Redux에서 Immer를 활용한 불변성 관리
-
-블로그 제목: Immer로 React와 Redux에서 불변성을 쉽게 관리하며 코드 품질 높이기"
+title: "Immer로 React와 Redux에서 불변성을 쉽게 관리하며 코드 품질 높이기"
 date: 2025-05-04 07:29:45
 categories: 프론트엔드
-tags: 주제:
+tags: immer
 ---
 
 # Immer로 React와 Redux에서 불변성을 쉽게 관리하며 코드 품질 높이기

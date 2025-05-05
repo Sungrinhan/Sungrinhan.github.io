@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "주제 추천: React Native를 활용한 크로스 플랫폼 모바일 앱 개발
-
-블로그 제목: React Native를 이용해 본격 크로스 플랫폼 모바일 앱 개발에 도전하기"
+title: "React Native를 이용해 본격 크로스 플랫폼 모바일 앱 개발에 도전하기"
 date: 2025-05-04 14:55:03
 categories: 프론트엔드
-tags: 주제
+tags: react-native
 ---
 
 # React Native를 이용해 본격 크로스 플랫폼 모바일 앱 개발에 도전하기
