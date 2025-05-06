@@ -72,29 +72,7 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/2025-05-01-%EC%A3%BC%EC%A0%9C-redux%EC%99%80-typescript%EC%9D%98-%EC%97%B0%EA%B3%84-%EC%82%AC%EC%9A%A9-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-redux%EC%99%80-typescript%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%8D%94-%EC%95%88%EC%A0%95%EC%A0%81%EC%9D%B8-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%B0%A9%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%9C-%EB%94%A5%EB%8B%A4%EC%9D%B4%EB%B8%8C/";
-          
-        },
-      },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/2025-04-28-%EC%A3%BC%EC%A0%9C-next.js%EC%97%90%EC%84%9C%EC%9D%98-server-side-rendering-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-next.js%EC%97%90%EC%84%9C%EC%9D%98-server-side-rendering-%ED%8D%BC%ED%8F%AC%EB%A8%BC%EC%8A%A4-%ED%96%A5%EC%83%81%EA%B3%BC-seo-%EC%B5%9C%EC%A0%81%ED%99%94%EB%A1%9C-%EB%A6%AC%EB%8D%94%ED%95%9C-%EA%B1%B8%EC%9D%8C-%EB%8D%94-%EB%82%98%EC%95%84%EA%B0%80%EA%B8%B0/";
-          
-        },
-      },{id: "post-프론트엔드-프로젝트를-설계할-때-고려해야할-필수-13가지",
+            },{id: "post-프론트엔드-프로젝트를-설계할-때-고려해야할-필수-13가지",
         
           title: "프론트엔드 프로젝트를 설계할 때 고려해야할 필수 13가지",
         
@@ -138,6 +116,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/graphql%EA%B3%BC-apollo%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-react%EC%97%90%EC%84%9C-graphql%EA%B3%BC-apollo%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%B2%A8%EB%8B%A8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC-%EB%B0%A9%EB%B2%95/";
           
         },
+      },{id: "post-redux와-typescript를-활용한-더-안정적인-상태-관리-방법에-대한-딥다이브",
+        
+          title: "Redux와 TypeScript를 활용한 더 안정적인 상태 관리 방법에 대한 딥다이브",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/%EC%A3%BC%EC%A0%9C-redux%EC%99%80-typescript%EC%9D%98-%EC%97%B0%EA%B3%84-%EC%82%AC%EC%9A%A9-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-redux%EC%99%80-typescript%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%8D%94-%EC%95%88%EC%A0%95%EC%A0%81%EC%9D%B8-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC-%EB%B0%A9%EB%B2%95%EC%97%90-%EB%8C%80%ED%95%9C-%EB%94%A5%EB%8B%A4%EC%9D%B4%EB%B8%8C/";
+          
+        },
       },{id: "post-react에서-typescript를-활용한-강력한-타입-관리-블로그-제목-react에서-typescript로-향상된-타입안정성과-코드-퀄리티-realize하기",
         
           title: "React에서 TypeScript를 활용한 강력한 타입 관리 블로그 제목: React에서 TypeScript로 향상된 타입안정성과 코드...",
@@ -158,6 +147,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/react-hooks%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC%EC%99%80-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-react-hooks%EB%A5%BC-%EC%A0%91%EC%86%8D%ED%95%B4%EC%84%9C-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%EC%99%80-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0%EB%A5%BC-%ED%95%9C%EB%8B%A8%EA%B3%84-%EB%8D%94-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0/";
+          
+        },
+      },{id: "post-next-js에서의-server-side-rendering-퍼포먼스-향상과-seo-최적화로-리더한-걸음-더-나아가기",
+        
+          title: "Next.js에서의 Server Side Rendering: 퍼포먼스 향상과 SEO 최적화로 리더한 걸음 더 나아가기",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/%EC%A3%BC%EC%A0%9C-next.js%EC%97%90%EC%84%9C%EC%9D%98-server-side-rendering-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-next.js%EC%97%90%EC%84%9C%EC%9D%98-server-side-rendering-%ED%8D%BC%ED%8F%AC%EB%A8%BC%EC%8A%A4-%ED%96%A5%EC%83%81%EA%B3%BC-seo-%EC%B5%9C%EC%A0%81%ED%99%94%EB%A1%9C-%EB%A6%AC%EB%8D%94%ED%95%9C-%EA%B1%B8%EC%9D%8C-%EB%8D%94-%EB%82%98%EC%95%84%EA%B0%80%EA%B8%B0/";
           
         },
       },{id: "post-react-router를-이용한-싱글-페이지-어플리케이션-구현-블로그-제목-react-router-활용-가이드-싱글-페이지-어플리케이션-구현하기",
