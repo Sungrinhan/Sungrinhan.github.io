@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "주제: Redux와 TypeScript의 연계 사용
-블로그 제목: Redux와 TypeScript를 활용한 더 안정적인 상태 관리 방법에 대한 딥다이브"
+title: "Redux와 TypeScript를 활용한 더 안정적인 상태 관리 방법에 대한 딥다이브"
 date: 2025-05-01 08:49:49
 categories: 프론트엔드
-tags: 주제:
+tags: redux
 ---
 
 ---
