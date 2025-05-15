@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-프론트엔드-프로젝트를-설계할-때-고려해야할-필수-13가지",
+            },{id: "post-styled-components를-활용한-react-스타일링-블로그-제목-react-스타일링의-혁신-styled-components를-활용한-강력한-css-in-js-기법-마스터하기",
+        
+          title: "Styled-components를 활용한 React 스타일링 블로그 제목: React 스타일링의 혁신, Styled-components를 활용한 강력한 CSS...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/styled-components%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-react-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%A7%81-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-react-%EC%8A%A4%ED%83%80%EC%9D%BC%EB%A7%81%EC%9D%98-%ED%98%81%EC%8B%A0,-styled-components%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%95%EB%A0%A5%ED%95%9C-css-in-js-%EA%B8%B0%EB%B2%95-%EB%A7%88%EC%8A%A4%ED%84%B0%ED%95%98%EA%B8%B0/";
+          
+        },
+      },{id: "post-프론트엔드-프로젝트를-설계할-때-고려해야할-필수-13가지",
         
           title: "프론트엔드 프로젝트를 설계할 때 고려해야할 필수 13가지",
         
