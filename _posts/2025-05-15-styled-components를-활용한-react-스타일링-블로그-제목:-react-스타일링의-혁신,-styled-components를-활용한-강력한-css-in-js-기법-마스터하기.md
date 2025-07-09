@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "Styled-components를 활용한 React 스타일링 
-
-블로그 제목: React 스타일링의 혁신, Styled-components를 활용한 강력한 CSS in JS 기법 마스터하기"
+title: "React 스타일링의 혁신, Styled-components를 활용한 강력한 CSS in JS 기법 마스터하기"
 date: 2025-05-15 12:15:24
 categories: 프론트엔드
-tags: Styled-components를
+tags: styled-component
 ---
 
 ## Styled-components란?
