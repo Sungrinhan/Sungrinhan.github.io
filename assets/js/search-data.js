@@ -72,9 +72,20 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-styled-components를-활용한-react-스타일링-블로그-제목-react-스타일링의-혁신-styled-components를-활용한-강력한-css-in-js-기법-마스터하기",
+            },{id: "post-",
         
-          title: "Styled-components를 활용한 React 스타일링 블로그 제목: React 스타일링의 혁신, Styled-components를 활용한 강력한 CSS...",
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/2025-07-09-%EC%A3%BC%EC%A0%9C-react%EC%99%80-d3.js%EB%A5%BC-%EA%B2%B0%ED%95%A9%ED%95%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%8B%9C%EA%B0%81%ED%99%94-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%A0%9C%EB%AA%A9-react%EC%99%80-d3.js%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%EB%8C%80%ED%99%94%ED%98%95-%EC%9B%B9-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%8B%9C%EA%B0%81%ED%99%94%EC%9D%98-%EC%84%B8%EA%B3%84/";
+          
+        },
+      },{id: "post-react-스타일링의-혁신-styled-components를-활용한-강력한-css-in-js-기법-마스터하기",
+        
+          title: "React 스타일링의 혁신, Styled-components를 활용한 강력한 CSS in JS 기법 마스터하기",
         
         description: "",
         section: "Posts",
